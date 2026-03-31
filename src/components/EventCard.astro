@@ -1,0 +1,89 @@
+---
+import CategoryBadge from './CategoryBadge.astro';
+import CountryFlag from './CountryFlag.astro';
+
+interface EventData {
+  title: string;
+  date: string;
+  date_end?: string;
+  date_display?: string;
+  approximate: boolean;
+  summary: string;
+  categories: string[];
+  countries: string[];
+  severity: 'info' | 'warning' | 'severe' | 'critical';
+  ongoing: boolean;
+}
+
+interface Props {
+  slug: string;
+  data: EventData;
+}
+
+const { slug, data: event } = Astro.props;
+
+const severityColors: Record<string, string> = {
+  info:     '#3b82f6',
+  warning:  '#f59e0b',
+  severe:   '#f97316',
+  critical: '#ef4444',
+};
+
+const severityLabels: Record<string, string> = {
+  info:     'Info',
+  warning:  'Warning',
+  severe:   'Severe',
+  critical: 'Critical',
+};
+
+const borderColor = severityColors[event.severity] ?? severityColors.info;
+const severityLabel = severityLabels[event.severity] ?? event.severity;
+
+const dateDisplay = event.date_display
+  ?? (event.date_end
+    ? `${event.date.slice(0, 4)}–${event.date_end.slice(0, 4)}`
+    : event.date);
+const displayDate = event.approximate ? `~${dateDisplay}` : dateDisplay;
+---
+<article
+  data-slug={slug}
+  class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-5 md:p-6 hover:shadow-md transition-shadow border-l-4"
+  style={`border-left-color: ${borderColor};`}
+>
+  <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+    <h3 class="text-gray-900 dark:text-gray-100 font-semibold text-base leading-snug">
+      <a
+        href={`/event/${slug}`}
+        class="hover:text-blue-600 dark:hover:text-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 rounded"
+      >
+        {event.title}
+      </a>
+    </h3>
+    <span
+      class="text-xs font-medium whitespace-nowrap"
+      style={`color: ${borderColor};`}
+      aria-label={`Severity: ${severityLabel}`}
+    >
+      {severityLabel}
+    </span>
+  </div>
+
+  <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{displayDate}</p>
+
+  <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2 mb-4">{event.summary}</p>
+
+  <div class="flex flex-wrap gap-2 items-center">
+    {event.categories.map((cat) => (
+      <CategoryBadge slug={cat} />
+    ))}
+    {event.countries.length > 0 && (
+      <span class="text-gray-300 dark:text-gray-700" aria-hidden="true">·</span>
+    )}
+    {event.countries.map((code) => (
+      <CountryFlag code={code} />
+    ))}
+    {event.ongoing && (
+      <span class="ml-auto text-xs font-medium text-orange-600 dark:text-orange-400">Ongoing</span>
+    )}
+  </div>
+</article>

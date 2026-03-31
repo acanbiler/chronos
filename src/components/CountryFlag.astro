@@ -1,0 +1,26 @@
+---
+import countriesRaw from '../data/countries.yaml';
+
+interface Country {
+  code: string;
+  name: string;
+  flag: string;
+  region: string;
+}
+
+interface Props {
+  code: string;
+}
+
+const countries = countriesRaw as Country[];
+const { code } = Astro.props;
+const country = countries.find((c) => c.code === code);
+const name = country?.name ?? code;
+const flag = country?.flag;
+---
+<span class="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
+  {flag
+    ? <span role="img" aria-label={`${name} flag`}>{flag}</span>
+    : null}
+  <span>{name}</span>
+</span>

@@ -1,0 +1,25 @@
+---
+import categoriesRaw from '../data/categories.yaml';
+
+interface Category {
+  slug: string;
+  label: string;
+  color: string;
+}
+
+interface Props {
+  slug: string;
+}
+
+const categories = categoriesRaw as Category[];
+const { slug } = Astro.props;
+const category = categories.find((c) => c.slug === slug);
+const label = category?.label ?? slug;
+const color = category?.color ?? '#6b7280';
+---
+<span
+  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
+  style={`background-color: ${color};`}
+>
+  {label}
+</span>
