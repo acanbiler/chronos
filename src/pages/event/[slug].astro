@@ -22,7 +22,7 @@ if (!event) {
 
 const { data } = event;
 
-// Related events: same category or country, not this event
+// Related events
 const allEvents = await getCollection('events');
 const related = allEvents
   .filter(
@@ -51,6 +51,11 @@ const severityColors: Record<string, string> = {
   critical: '#ef4444',
 };
 
+// Turkish overrides
+const tr = data.translations?.tr;
+const bodyHtmlEn = data.body ? renderMarkdown(data.body) : null;
+const bodyHtmlTr = tr?.body  ? renderMarkdown(tr.body)  : null;
+
 const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
 ---
 <Base
@@ -64,23 +69,23 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
       <a
         href="/"
         class="text-sm text-blue-600 dark:text-blue-400 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 rounded"
-      >
-        ← Back to Timeline
-      </a>
+        x-text="$store.i18n.t.back_to_timeline"
+      >← Back to Timeline</a>
     </nav>
 
     <article>
-      <!-- Header -->
       <header class="mb-8">
         <div class="flex flex-wrap gap-2 mb-3">
           {data.categories.map((cat) => <CategoryBadge slug={cat} />)}
         </div>
 
-        <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          {data.title}
+        <!-- Title: EN / TR -->
+        <h1 class="text-3xl font-bold text-stone-900 dark:text-stone-100 mb-2">
+          <span x-show="$store.i18n.lang !== 'tr'">{data.title}</span>
+          {tr?.title && <span x-show="$store.i18n.lang === 'tr'" x-cloak>{tr.title}</span>}
         </h1>
 
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <div class="flex flex-wrap items-center gap-4 text-sm text-stone-500 dark:text-stone-400">
           <time>{displayDate}</time>
           <span
             class="inline-flex items-center gap-1.5 font-medium"
@@ -91,22 +96,21 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
               style={`background-color: ${severityColors[data.severity]};`}
               aria-hidden="true"
             ></span>
-            {data.severity.charAt(0).toUpperCase() + data.severity.slice(1)}
+            <span x-text={`$store.i18n.t.severity_${data.severity}`}>{data.severity}</span>
           </span>
           {data.ongoing && (
-            <span class="text-orange-600 dark:text-orange-400 font-medium">Ongoing</span>
+            <span class="text-orange-600 dark:text-orange-400 font-medium" x-text="$store.i18n.t.ongoing_label">Ongoing</span>
           )}
         </div>
 
         <div class="flex flex-wrap gap-3 mt-3">
           {data.countries.map((code) => <CountryFlag code={code} />)}
           {data.region && (
-            <span class="text-sm text-gray-500 dark:text-gray-400">{data.region}</span>
+            <span class="text-sm text-stone-500 dark:text-stone-400">{data.region}</span>
           )}
         </div>
       </header>
 
-      <!-- Optional image -->
       {data.image && (
         <figure class="mb-8 rounded-xl overflow-hidden">
           <img
@@ -116,32 +120,47 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
             loading="lazy"
           />
           {data.image.credit && (
-            <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-right">
+            <figcaption class="text-xs text-stone-500 dark:text-stone-400 mt-2 text-right">
               {data.image.credit}
             </figcaption>
           )}
         </figure>
       )}
 
-      <!-- Summary lead -->
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6 font-medium">
-        {data.summary}
-      </p>
+      <!-- Summary lead: EN / TR -->
+      <div class="text-lg text-stone-700 dark:text-stone-300 leading-relaxed mb-6 font-medium">
+        <span x-show="$store.i18n.lang !== 'tr'">{data.summary}</span>
+        {tr?.summary && <span x-show="$store.i18n.lang === 'tr'" x-cloak>{tr.summary}</span>}
+      </div>
 
-      <!-- Body (Markdown) -->
-      {data.body && (
+      <!-- Body prose: EN / TR -->
+      {bodyHtmlEn && (
         <div
-          class="prose prose-gray dark:prose-invert max-w-none mb-8"
-          set:html={renderMarkdown(data.body)}
+          class="prose prose-stone dark:prose-invert max-w-none mb-8"
+          x-show="$store.i18n.lang !== 'tr'"
+          set:html={bodyHtmlEn}
         />
+      )}
+      {bodyHtmlTr && (
+        <div
+          class="prose prose-stone dark:prose-invert max-w-none mb-8"
+          x-show="$store.i18n.lang === 'tr'"
+          x-cloak
+          set:html={bodyHtmlTr}
+        />
+      )}
+      {/* TR section without body: show fallback note */}
+      {tr && !bodyHtmlTr && bodyHtmlEn && (
+        <div x-show="$store.i18n.lang === 'tr'" x-cloak class="mb-8">
+          <p class="text-sm text-stone-500 dark:text-stone-400 italic mb-4" x-text="$store.i18n.t.body_english_only"></p>
+          <div class="prose prose-stone dark:prose-invert max-w-none" set:html={bodyHtmlEn} />
+        </div>
       )}
 
       <!-- Sources -->
       {data.sources.length > 0 && (
-        <section class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800" aria-labelledby="sources-heading">
-          <h2 id="sources-heading" class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide mb-3">
-            Sources
-          </h2>
+        <section class="mt-8 pt-6 border-t border-stone-200 dark:border-stone-800" aria-labelledby="sources-heading">
+          <h2 id="sources-heading" class="text-sm font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wide mb-3" x-text="$store.i18n.t.sources">Sources</h2>
           <ul class="space-y-2">
             {data.sources.map((source) => (
               <li>
@@ -162,10 +181,8 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
 
     <!-- Related events -->
     {related.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800" aria-labelledby="related-heading">
-        <h2 id="related-heading" class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          Related Events
-        </h2>
+      <section class="mt-12 pt-8 border-t border-stone-200 dark:border-stone-800" aria-labelledby="related-heading">
+        <h2 id="related-heading" class="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-4" x-text="$store.i18n.t.related_events">Related Events</h2>
         <ul class="space-y-2">
           {related.map((e) => (
             <li>
@@ -173,7 +190,7 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
                 href={`/event/${e.id}`}
                 class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 rounded"
               >
-                <span class="text-gray-400 dark:text-gray-600">{e.data.date.slice(0, 4)}</span>
+                <span class="text-stone-400 dark:text-stone-600">{e.data.date.slice(0, 4)}</span>
                 {e.data.title}
               </a>
             </li>
