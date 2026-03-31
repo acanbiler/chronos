@@ -13,6 +13,7 @@ interface EventData {
   countries: string[];
   severity: 'info' | 'warning' | 'severe' | 'critical';
   ongoing: boolean;
+  translations?: { tr?: { title?: string; summary?: string } };
 }
 
 interface EventEntry {
@@ -25,6 +26,13 @@ interface Props {
 }
 
 const { events } = Astro.props;
+
+const severityColors: Record<string, string> = {
+  info:     '#3b82f6',
+  warning:  '#f59e0b',
+  severe:   '#f97316',
+  critical: '#ef4444',
+};
 
 // Sort descending by date
 const sorted = [...events].sort(
@@ -47,38 +55,42 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 <div class="relative">
   <!-- Vertical timeline line -->
   <div
-    class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"
+    class="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-stone-300 dark:bg-stone-700"
     aria-hidden="true"
   ></div>
 
   {yearGroups.map(([year, yearEvents]) => (
     <div>
-      <!-- Year marker (sticky) -->
+      <!-- Year marker — editorial, sticky -->
       <div
-        class="sticky top-14 z-10 mb-4"
+        class="sticky top-14 z-10 mb-6"
         x-show={`${JSON.stringify(yearEvents.map(e => e.id))}.some(s => $data.visibleSlugs.has(s))`}
       >
-        <div class="inline-flex items-center pl-8 md:pl-16 pr-4 py-2 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm">
-          <span class="text-lg font-bold text-gray-900 dark:text-gray-100">{year}</span>
+        <div class="pl-10 md:pl-20 pr-4 py-3 bg-stone-50/95 dark:bg-stone-950/95 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800 flex items-baseline gap-3">
+          <span class="text-5xl font-black tracking-tight text-stone-200 dark:text-stone-800 select-none" aria-hidden="true">
+            {year}
+          </span>
+          <span class="text-lg font-bold text-stone-900 dark:text-stone-100 sr-only">{year}</span>
         </div>
       </div>
 
       <!-- Events for this year -->
-      <div class="space-y-4 mb-8 pl-10 md:pl-20">
+      <div class="space-y-4 mb-10 pl-10 md:pl-20">
         {yearEvents.map((event) => (
           <div
             class="relative"
             x-show={`$data.visibleSlugs.has('${event.id}')`}
             x-transition
           >
-            <!-- Connector dot -->
+            <!-- Connector dot — severity coloured -->
             <div
-              class="absolute -left-6 md:-left-12 top-5 w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 border-2 border-gray-50 dark:border-gray-950"
+              class="absolute -left-6 md:-left-12 top-5 w-3.5 h-3.5 rounded-full border-2 border-stone-50 dark:border-stone-950"
+              style={`background-color: ${severityColors[event.data.severity] ?? severityColors.info};`}
               aria-hidden="true"
             ></div>
             <!-- Connector line (horizontal) -->
             <div
-              class="absolute -left-5 md:-left-10 top-6 w-5 md:w-10 h-0.5 bg-gray-300 dark:bg-gray-700"
+              class="absolute -left-5 md:-left-10 top-6 w-5 md:w-10 h-px bg-stone-300 dark:bg-stone-700"
               aria-hidden="true"
             ></div>
             <EventCard slug={event.id} data={event.data} />
