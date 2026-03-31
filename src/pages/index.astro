@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import FilterBar from '../components/FilterBar.astro';
+import TimelineTrack from '../components/TimelineTrack.astro';
+import { getCollection } from 'astro:content';
+import { buildEventIndex } from '../lib/filter-index';
+
+const allEvents = await getCollection('events');
+const eventIndex = buildEventIndex(allEvents);
+
+const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
+---
+<Base
+  title="World Events Timeline"
+  description="A visual timeline of historical and ongoing world events, organised by category, country, and date."
+  canonicalUrl={siteUrl}
+>
+  <!-- Embed event index for Alpine -->
+  <script type="application/json" id="event-index" set:html={JSON.stringify(eventIndex)} />
+
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">World Events Timeline</h1>
+      <p class="mt-2 text-gray-600 dark:text-gray-400">
+        Historical and ongoing events — {allEvents.length} total
+      </p>
+    </header>
+
+    <!--
+      x-data lives here so both FilterBar and TimelineTrack share the same Alpine scope.
+      FilterBar reads/writes state; TimelineTrack reacts via $data.visibleSlugs.
+    -->
+    <div
+      class="flex flex-col lg:flex-row gap-8"
+      x-data="{
+        search: '',
+        categories: [],
+        countries: [],
+        severities: [],
+        yearFrom: null,
+        yearTo: null,
+        ongoingOnly: false,
+        visibleSlugs: new Set(),
+        index: [],
+        mobileOpen: false,
+
+        init() {
+          this.index = JSON.parse(document.getElementById('event-index').textContent);
+          this.restoreFromHash();
+          this.recomputeVisible();
+          this.$watch('search',      () => { this.recomputeVisible(); this.syncHash(); });
+          this.$watch('categories',  () => { this.recomputeVisible(); this.syncHash(); });
+          this.$watch('countries',   () => { this.recomputeVisible(); this.syncHash(); });
+          this.$watch('severities',  () => { this.recomputeVisible(); this.syncHash(); });
+          this.$watch('yearFrom',    () => { this.recomputeVisible(); this.syncHash(); });
+          this.$watch('yearTo',      () => { this.recomputeVisible(); this.syncHash(); });
+          this.$watch('ongoingOnly', () => { this.recomputeVisible(); this.syncHash(); });
+          window.addEventListener('hashchange', () => {
+            this.restoreFromHash();
+            this.recomputeVisible();
+          });
+        },
+
+        recomputeVisible() {
+          const visible = new Set();
+          for (const event of this.index) {
+            if (this.matchesEvent(event)) visible.add(event.slug);
+          }
+          this.visibleSlugs = visible;
+        },
+
+        matchesEvent(event) {
+          if (this.search.trim() && !event.searchText.includes(this.search.toLowerCase())) return false;
+          if (this.categories.length > 0 && !this.categories.some(c => event.categories.includes(c))) return false;
+          if (this.countries.length > 0 && !this.countries.some(c => event.countries.includes(c))) return false;
+          if (this.severities.length > 0 && !this.severities.includes(event.severity)) return false;
+          if (this.yearFrom !== null && event.yearTo   < this.yearFrom) return false;
+          if (this.yearTo   !== null && event.yearFrom > this.yearTo)   return false;
+          if (this.ongoingOnly && !event.ongoing) return false;
+          return true;
+        },
+
+        syncHash() {
+          const params = new URLSearchParams();
+          if (this.search.trim())       params.set('search',     this.search.trim());
+          if (this.categories.length)   params.set('categories', this.categories.join(','));
+          if (this.countries.length)    params.set('countries',  this.countries.join(','));
+          if (this.severities.length)   params.set('severity',   this.severities.join(','));
+          if (this.yearFrom !== null)   params.set('yearFrom',   String(this.yearFrom));
+          if (this.yearTo   !== null)   params.set('yearTo',     String(this.yearTo));
+          if (this.ongoingOnly)         params.set('ongoing',    'true');
+          const hash = params.toString() ? '#' + params.toString() : location.pathname;
+          history.replaceState(null, '', hash === location.pathname ? location.pathname : '#' + params.toString());
+        },
+
+        restoreFromHash() {
+          const raw = location.hash.slice(1);
+          if (!raw) return;
+          const params = new URLSearchParams(raw);
+          this.search      = params.get('search')     ?? '';
+          this.categories  = params.get('categories') ? params.get('categories').split(',') : [];
+          this.countries   = params.get('countries')  ? params.get('countries').split(',')  : [];
+          this.severities  = params.get('severity')   ? params.get('severity').split(',')   : [];
+          this.yearFrom    = params.get('yearFrom')   ? Number(params.get('yearFrom'))       : null;
+          this.yearTo      = params.get('yearTo')     ? Number(params.get('yearTo'))         : null;
+          this.ongoingOnly = params.get('ongoing')    === 'true';
+        },
+
+        resetFilters() {
+          this.search = ''; this.categories = []; this.countries = [];
+          this.severities = []; this.yearFrom = null; this.yearTo = null; this.ongoingOnly = false;
+        },
+      }"
+    >
+      <FilterBar />
+      <div class="flex-1 min-w-0">
+        <TimelineTrack events={allEvents} />
+      </div>
+    </div>
+  </main>
+</Base>

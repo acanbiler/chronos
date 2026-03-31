@@ -1,0 +1,90 @@
+---
+import EventCard from './EventCard.astro';
+import { normalizeEventDate } from '../lib/dates';
+
+interface EventData {
+  title: string;
+  date: string;
+  date_end?: string;
+  date_display?: string;
+  approximate: boolean;
+  summary: string;
+  categories: string[];
+  countries: string[];
+  severity: 'info' | 'warning' | 'severe' | 'critical';
+  ongoing: boolean;
+}
+
+interface EventEntry {
+  id: string;
+  data: EventData;
+}
+
+interface Props {
+  events: EventEntry[];
+}
+
+const { events } = Astro.props;
+
+// Sort descending by date
+const sorted = [...events].sort(
+  (a, b) =>
+    normalizeEventDate(b.data.date).getTime() -
+    normalizeEventDate(a.data.date).getTime()
+);
+
+// Group by year
+const byYear = new Map<number, EventEntry[]>();
+for (const event of sorted) {
+  const year = Number.parseInt(event.data.date.slice(0, 4), 10);
+  const group = byYear.get(year) ?? [];
+  group.push(event);
+  byYear.set(year, group);
+}
+
+const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
+---
+<div class="relative">
+  <!-- Vertical timeline line -->
+  <div
+    class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"
+    aria-hidden="true"
+  ></div>
+
+  {yearGroups.map(([year, yearEvents]) => (
+    <div>
+      <!-- Year marker (sticky) -->
+      <div
+        class="sticky top-14 z-10 mb-4"
+        x-show={`${JSON.stringify(yearEvents.map(e => e.id))}.some(s => $data.visibleSlugs.has(s))`}
+      >
+        <div class="inline-flex items-center pl-8 md:pl-16 pr-4 py-2 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm">
+          <span class="text-lg font-bold text-gray-900 dark:text-gray-100">{year}</span>
+        </div>
+      </div>
+
+      <!-- Events for this year -->
+      <div class="space-y-4 mb-8 pl-10 md:pl-20">
+        {yearEvents.map((event) => (
+          <div
+            class="relative"
+            x-show={`$data.visibleSlugs.has('${event.id}')`}
+            x-transition
+          >
+            <!-- Connector dot -->
+            <div
+              class="absolute -left-6 md:-left-12 top-5 w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 border-2 border-gray-50 dark:border-gray-950"
+              aria-hidden="true"
+            ></div>
+            <!-- Connector line (horizontal) -->
+            <div
+              class="absolute -left-5 md:-left-10 top-6 w-5 md:w-10 h-0.5 bg-gray-300 dark:bg-gray-700"
+              aria-hidden="true"
+            ></div>
+            <EventCard slug={event.id} data={event.data} />
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

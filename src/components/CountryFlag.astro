@@ -1,18 +1,10 @@
 ---
-import countriesRaw from '../data/countries.yaml';
-
-interface Country {
-  code: string;
-  name: string;
-  flag: string;
-  region: string;
-}
+import { countries } from '../data/countries';
 
 interface Props {
   code: string;
 }
 
-const countries = countriesRaw as Country[];
 const { code } = Astro.props;
 const country = countries.find((c) => c.code === code);
 const name = country?.name ?? code;

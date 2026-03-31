@@ -1,17 +1,10 @@
 ---
-import categoriesRaw from '../data/categories.yaml';
-
-interface Category {
-  slug: string;
-  label: string;
-  color: string;
-}
+import { categories } from '../data/categories';
 
 interface Props {
   slug: string;
 }
 
-const categories = categoriesRaw as Category[];
 const { slug } = Astro.props;
 const category = categories.find((c) => c.slug === slug);
 const label = category?.label ?? slug;

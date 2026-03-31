@@ -1,0 +1,174 @@
+---
+import { categories } from '../data/categories';
+import { countries } from '../data/countries';
+---
+<aside aria-label="Filters" class="lg:w-72 lg:flex-shrink-0">
+  <!-- Mobile toggle button (< lg) -->
+  <div class="lg:hidden mb-4">
+    <button
+      @click="mobileOpen = !mobileOpen"
+      class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18M7 12h10M11 20h2" />
+      </svg>
+      <span x-text="mobileOpen ? 'Hide Filters' : 'Show Filters'">Show Filters</span>
+      <span class="ml-auto text-xs text-gray-500 dark:text-gray-400" x-text="`(${visibleSlugs.size} events)`"></span>
+    </button>
+  </div>
+
+  <!-- Filter panel -->
+  <div
+    x-show="mobileOpen || window.innerWidth >= 1024"
+    x-transition
+    class="lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto space-y-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-5"
+  >
+    <div class="flex items-center justify-between">
+      <h2 class="font-semibold text-gray-900 dark:text-gray-100">Filters</h2>
+      <span class="hidden lg:block text-xs text-gray-500 dark:text-gray-400" x-text="`${visibleSlugs.size} events`"></span>
+    </div>
+
+    <!-- Search -->
+    <div>
+      <label for="filter-search" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Search</label>
+      <input
+        id="filter-search"
+        type="text"
+        x-model="search"
+        placeholder="Search events…"
+        class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <!-- Categories -->
+    <div>
+      <fieldset>
+        <legend class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Categories</legend>
+        <div class="space-y-2">
+          {categories.map((cat) => (
+            <label class="flex items-center gap-2 cursor-pointer group">
+              <input
+                type="checkbox"
+                value={cat.slug}
+                x-model="categories"
+                class="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
+              />
+              <span
+                class="inline-block w-2 h-2 rounded-full flex-shrink-0"
+                style={`background-color: ${cat.color};`}
+                aria-hidden="true"
+              ></span>
+              <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
+                {cat.label}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Severity -->
+    <div>
+      <fieldset>
+        <legend class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Severity</legend>
+        <div class="space-y-2">
+          {[
+            { value: 'info',     label: 'Info',     color: '#3b82f6' },
+            { value: 'warning',  label: 'Warning',  color: '#f59e0b' },
+            { value: 'severe',   label: 'Severe',   color: '#f97316' },
+            { value: 'critical', label: 'Critical', color: '#ef4444' },
+          ].map((sev) => (
+            <label class="flex items-center gap-2 cursor-pointer group">
+              <input
+                type="checkbox"
+                value={sev.value}
+                x-model="severities"
+                class="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
+              />
+              <span
+                class="inline-block w-2 h-2 rounded-full flex-shrink-0"
+                style={`background-color: ${sev.color};`}
+                aria-hidden="true"
+              ></span>
+              <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
+                {sev.label}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Date range -->
+    <div>
+      <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Date Range</p>
+      <div class="flex gap-2 items-center">
+        <label class="sr-only" for="filter-year-from">From year</label>
+        <input
+          id="filter-year-from"
+          type="number"
+          x-model.number="yearFrom"
+          placeholder="From"
+          min="1900"
+          max="2100"
+          class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="text-gray-400 dark:text-gray-600 text-sm flex-shrink-0">–</span>
+        <label class="sr-only" for="filter-year-to">To year</label>
+        <input
+          id="filter-year-to"
+          type="number"
+          x-model.number="yearTo"
+          placeholder="To"
+          min="1900"
+          max="2100"
+          class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+    </div>
+
+    <!-- Countries -->
+    <div>
+      <label for="filter-country" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Countries</label>
+      <select
+        id="filter-country"
+        multiple
+        x-model="countries"
+        class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
+      >
+        {countries.map((country) => (
+          <option value={country.code}>{country.flag} {country.name}</option>
+        ))}
+      </select>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Ctrl/Cmd+click to select multiple</p>
+    </div>
+
+    <!-- Ongoing toggle -->
+    <div class="flex items-center justify-between">
+      <label for="filter-ongoing" class="text-sm font-medium text-gray-700 dark:text-gray-300">
+        Ongoing events only
+      </label>
+      <button
+        id="filter-ongoing"
+        role="switch"
+        :aria-checked="ongoingOnly.toString()"
+        @click="ongoingOnly = !ongoingOnly"
+        class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+        :class="ongoingOnly ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'"
+      >
+        <span
+          class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+          :class="ongoingOnly ? 'translate-x-5' : 'translate-x-0'"
+        ></span>
+      </button>
+    </div>
+
+    <!-- Reset button -->
+    <button
+      @click="resetFilters()"
+      class="w-full px-4 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
+    >
+      Reset Filters
+    </button>
+  </div>
+</aside>
