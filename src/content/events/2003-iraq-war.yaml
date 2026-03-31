@@ -57,3 +57,33 @@ sources:
     url: "https://www.iraqbodycount.org"
   - label: "Chilcot Inquiry Report (UK)"
     url: "https://webarchive.nationalarchives.gov.uk/ukgwa/20171123122743/http://www.iraqinquiry.org.uk/the-report/"
+
+translations:
+  tr:
+    title: "Irak Savaşı"
+    summary: >
+      ABD liderliğindeki koalisyon, Irak'ın kitle imha silahına sahip olduğu iddiasıyla
+      Mart 2003'te ülkeyi işgal ederek Saddam Hüseyin hükümetini birkaç hafta içinde
+      devirdi. Söz konusu silahlar hiçbir zaman bulunamadı. İşgal, yüz binlerce Iraklının
+      hayatını kaybettiği bir isyan ve mezhepsel çatışmayı alevlendirerek bölgeyi on yıllarca
+      istikrarsızlaştırdı.
+    body: |
+      İşgal, George W. Bush yönetimi tarafından Irak'ın biyolojik ve kimyasal silah stokları
+      bulundurduğu ve nükleer silah edinmeye çalıştığı gerekçesiyle meşrulaştırıldı. Hans Blix
+      başkanlığındaki BM silah denetçileri hâlâ denetimleri sürdürüyor ve KİS programlarına
+      ilişkin herhangi bir kanıt bulamamışken ABD, ikinci bir BM Güvenlik Konseyi kararı
+      olmaksızın 20 Mart 2003'te işgali başlattı.
+
+      Saddam Hüseyin'in hükümeti, ABD kuvvetlerinin Bağdat'a girdiği 9 Nisan 2003'te çöktü.
+      Koalisyon Geçici Yönetimi, Irak Ordusu'nu dağıtıp hükümeti Baas partisinden
+      arındırdı; bu adımlar, askeri eğitim almış büyük bir işsiz silahlı insan havuzu
+      yaratarak isyanı körüklediği gerekçesiyle sonradan yoğun eleştiri aldı.
+
+      2006'ya gelindiğinde Sünni ve Şii gruplar arasındaki mezhepsel şiddet Irak'ı neredeyse
+      iç savaşa sürükledi. 2007'deki 30.000 ilave ABD askeriyle gerçekleştirilen "takviye"
+      harekâtı şiddeti azalttı; ancak altta yatan siyasi bölünmüşlüğü çözemedi.
+
+      Son ABD muharebe birlikleri Aralık 2011'de çekildi. Irak'taki sivil ölü sayısına
+      ilişkin tahminler 150.000 ile 460.000'in üzerinde arasında değişmekte; ABD'nin askeri
+      kaybı ise yaklaşık 4.500 olarak belgelenmektedir. Oluşan güç boşluğu, 2013–2014'te
+      IŞİD'in yükselişine zemin hazırladı.

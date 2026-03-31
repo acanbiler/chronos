@@ -55,3 +55,34 @@ sources:
     url: "https://covid19.who.int"
   - label: "Our World in Data — COVID-19"
     url: "https://ourworldindata.org/coronavirus"
+
+translations:
+  tr:
+    title: "COVID-19 Salgını"
+    summary: >
+      SARS-CoV-2 koronavirüsünün yol açtığı COVID-19 salgını, DSÖ tarafından 30 Ocak
+      2020'de Uluslararası Halk Sağlığı Acil Durumu, 11 Mart 2020'de ise pandemi olarak
+      ilan edildi. DSÖ'nün Mayıs 2023'te küresel sağlık acil durumunu sona erdirmesine kadar
+      virüs, resmi kayıtlara göre yaklaşık 7 milyon kişinin hayatını kaybetmesine neden
+      olurken fazla ölüm tahminleri 15 ila 20 milyon arasında seyretti.
+    body: |
+      SARS-CoV-2, 2019'un sonlarında Çin'in Vuhan şehrinde ilk kez tanımlandı. Aylarca
+      süren yayılma sürecinde İtalya, İspanya, Amerika Birleşik Devletleri, Brezilya ve
+      Hindistan'daki sağlık sistemlerini alt üst etti. Nisan 2020'ye gelindiğinde dünya
+      nüfusunun üçte birinden fazlası bir tür sokağa çıkma kısıtlaması altındaydı.
+
+      Salgın, tarihin en hızlı aşı geliştirme sürecini tetikledi. Pfizer-BioNTech ve
+      Moderna'nın ilk mRNA aşıları, virüsün dizilenmesinden itibaren bir yıldan kısa bir
+      süre sonra Aralık 2020'de acil kullanım onayı aldı. 2023 ortasına kadar dünya
+      genelinde 13 milyarın üzerinde aşı dozu uygulandı.
+
+      Ekonomik yıkım ağır oldu. Küresel GSYİH, Büyük Buhran'dan bu yana barış döneminin
+      en derin durgunluğu olan 2020'de %3,1 küçüldü. Hükümetler tahminen 16 trilyon dolarlık
+      acil mali destek harcadı. Tedarik zinciri aksaklıkları, pandemi sonrası teşvik
+      tedbimleriyle birleşince 2021–2022'de 40 yılın en yüksek enflasyon oranlarına zemin
+      hazırladı.
+
+      Hayatta kalanların bir bölümünde görülen kalıcı belirtiler olan uzun COVID, önemli bir
+      halk sağlığı sorunu olarak gün yüzüne çıktı. Salgın aynı zamanda yüksek ve düşük gelirli
+      ülkeler arasındaki derin aşı erişim eşitsizliğini de gözler önüne sererek fikri mülkiyet
+      hakları ve küresel sağlık yönetişimine ilişkin tartışmaları yeniden canlandırdı.

@@ -55,3 +55,28 @@ sources:
     url: "https://www.ushmm.org/information/about-the-museum"
   - label: "Yad Vashem World Holocaust Remembrance Center"
     url: "https://www.yadvashem.org"
+
+translations:
+  tr:
+    title: "Holokost"
+    summary: >
+      Holokost, Nazi rejimi ve iş birlikçileri tarafından devlet destekli ve sistematik
+      biçimde uygulanan altı milyon Yahudi'nin zulüm ve katledilmesidir. Ocak 1933'te
+      Almanya'da iktidara gelen Naziler, Almanların "ırk üstünlüğüne" sahip olduğuna ve
+      Yahudilerin "aşağı" bir ırk olduğuna inanıyordu.
+    body: |
+      Holokost, 1930'larda Almanya'daki ayrımcı yasalarla başladı ve Avrupa Yahudilerinin
+      tamamı işgal altındaki Polonya'da bulunan altı imha kampına — Auschwitz-Birkenau,
+      Belzec, Chelmno, Majdanek, Sobibor ve Treblinka — toplu sürgünleriyle tırmandı.
+
+      Yalnızca Auschwitz-Birkenau'da yaklaşık 1,1 milyon insan katledildi. Yahudi kurbanların
+      yanı sıra Naziler; Romanları, engellileri, Sovyet savaş esirlerini, Polonyalı sivilleri,
+      eşcinselleri, Yehova Şahitlerini ve siyasi muhalefeti de sistematik biçimde öldürdü.
+
+      Nürnberg davaları (1945–1946), hayatta kalan Nazi liderlerini savaş suçları ve insanlığa
+      karşı suçlardan yargılayarak bireylerin uluslararası hukuk kapsamında hesap
+      verebileceğini emsal oluşturacak biçimde belirledi. Davalar, 1948 tarihli BM Soykırım
+      Sözleşmesi'nin hazırlanmasına da katkıda bulundu.
+
+      "Soykırım" terimi, Holokost'a tepki olarak Polonya asıllı Yahudi hukukçu Raphael Lemkin
+      tarafından icat edildi ve 1948'de uluslararası hukuka resmen girdi.

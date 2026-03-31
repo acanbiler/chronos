@@ -54,3 +54,25 @@ sources:
     url: "https://hpmmuseum.jp"
   - label: "Atomic Heritage Foundation"
     url: "https://www.atomicheritage.org"
+
+translations:
+  tr:
+    title: "Hiroşima ve Nagazaki'nin Atom Bombası ile Bombalanması"
+    summary: >
+      6 Ağustos 1945'te Amerika Birleşik Devletleri, savaşta kullanılan ilk atom bombasını
+      Japon şehri Hiroşima'ya düşürerek tahminen 70.000–80.000 kişiyi anında öldürdü; sonraki
+      aylarda radyasyon maruziyetinden binlerce kişi daha hayatını kaybetti. Üç gün sonra
+      Nagazaki'ye ikinci bir bomba atıldı.
+    body: |
+      "Little Boy" (Küçük Çocuk) lakaplı bomba, B-29 Süperkalesi *Enola Gay*'den atılan
+      uranyum tabancalı bir cihazdı. Patlama ve ardından gelen yangın fırtınası Hiroşima'nın
+      binalarının yaklaşık %69'unu tahrip etti. 1945 yılı sonuna kadar bombalama kaynaklı
+      toplam ölü sayısının 90.000–166.000 olduğu tahmin edildi.
+
+      Üç gün sonra, 9 Ağustos'ta Nagazaki üzerine atılan "Fat Man" (Şişman Adam) lakaplı
+      plütonyum bombasında yaklaşık 40.000–80.000 kişi hayatını kaybetti. Japonya 15 Ağustos
+      1945'te teslim olacağını duyurarak İkinci Dünya Savaşı'nı resmen sona erdirdi.
+
+      Bombalamalara, nükleer caydırıcılık, silah kontrolü ve sivil nüfusun hedef alınmasının
+      etiği hakkında küresel bir tartışma eşlik etti. Hibakuşa (atom bombası hayatta
+      kalanları), seksen yıldır uluslararası silahsızlanma hareketinin merkezinde yer almaktadır.

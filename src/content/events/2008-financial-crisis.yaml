@@ -58,3 +58,35 @@ sources:
     url: "https://fcic.law.stanford.edu/report"
   - label: "IMF — Global Financial Stability Report 2008"
     url: "https://www.imf.org/en/Publications/GFSR"
+
+translations:
+  tr:
+    title: "2008 Küresel Finansal Krizi"
+    summary: >
+      2007–2008 yıllarında ABD'nin yüksek riskli konut kredisi piyasasının çöküşü,
+      Büyük Buhran'dan bu yana yaşanan en ağır küresel finansal krizi tetikledi.
+      Eylül 2008'de Lehman Brothers'ın iflası dünya genelinde bir kredi dondurmasına,
+      borsa çöküşlerine ve on milyonlarca kişiyi işsiz bırakan durgunluklara neden oldu.
+    body: |
+      Yıllar içinde biriken gevşek kredi standartları, karmaşık mortgage'a dayalı menkul
+      kıymetler ve yetersiz finansal düzenleme, Amerika Birleşik Devletleri'nde büyük
+      bir konut balonu yarattı. Konut fiyatları 2006–2007'de zirveye ulaşıp düşmeye
+      başlayınca yüksek riskli mortgage temerrütleri fırladı; bu enstrümanları elinde
+      bulunduran finansal kuruluşlar yıkıcı kayıplar yaşadı.
+
+      Kriz, Eylül 2008'de akut evresine ulaştı. Fannie Mae ve Freddie Mac devlet
+      vesayetine alındı. Lehman Brothers, 15 Eylül 2008'de ABD tarihinin en büyük
+      iflasını açıkladı. Merrill Lynch Bank of America'ya satıldı. AIG, çöküşünü
+      önlemek için 85 milyar dolarlık devlet kurtarma paketine muhtaç kaldı.
+
+      ABD hükümeti, 700 milyar dolarlık Sorunlu Varlıkları Kurtarma Programı (TARP) ile
+      yanıt verdi. Federal Rezerv faiz oranlarını sıfıra yakın düzeye indirerek benzeri
+      görülmemiş parasal genişleme programları başlattı; dünya genelindeki merkez bankaları
+      benzer önlemler aldı.
+
+      Kriz, 1930'lardan bu yana yaşanan en uzun ve derin küresel durgunluğu tetikledi.
+      ABD'de işsizlik Ekim 2009'da %10'a çıktı; Avro Bölgesi 2012–2013'e kadar süren
+      uzun soluklu bir egemenlik borç kriziyle boğuştu. Küresel GSYİH 2009'da yaklaşık
+      %2 küçüldü. 2010'dan itibaren uygulanan Basel III bankacılık düzenlemeleri,
+      1930'lardan bu yana küresel bankacılık sisteminin en kapsamlı yeniden yapılanması
+      oldu.

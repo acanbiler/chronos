@@ -53,3 +53,32 @@ sources:
     url: "https://9-11commission.gov/report/"
   - label: "National September 11 Memorial and Museum"
     url: "https://www.911memorial.org"
+
+translations:
+  tr:
+    title: "11 Eylül Saldırıları"
+    summary: >
+      11 Eylül 2001 sabahı, on dokuz El Kaide militanı Amerika Birleşik Devletleri'ne
+      koordineli bir saldırı gerçekleştirerek dört ticari uçağa el koydu. İki uçak New
+      York'taki Dünya Ticaret Merkezi kulelerine çarptı, biri Pentagon'a isabet etti ve
+      dördüncüsü yolcuların direnişinin ardından Pennsylvania'da düştü. Yaklaşık
+      3.000 kişi hayatını kaybetti.
+    body: |
+      Saldırılar El Kaide lideri Usame bin Ladin tarafından planlanıp emredildi ve 19 kişilik
+      bir operatörler hücresi tarafından icra edildi. American Airlines Uçuşu 11 ile United
+      Airlines Uçuşu 175, Dünya Ticaret Merkezi'nin kuzey ve güney kulelerine çarptı; her
+      iki kule de iki saat içinde çöktü. American Airlines Uçuşu 77, Virginia'daki Arlington'da
+      Pentagon'a isabet etti. United Airlines Uçuşu 93 ise yolcuların — diğer kaçırma
+      olaylarını telefon görüşmelerinde öğrendikten sonra — kontrolü geri almaya çalışmasının
+      ardından Pennsylvania'daki Shanksville yakınlarına düştü.
+
+      Toplam 2.977 kurbanın hayatını kaybetmesiyle bu saldırı tarihin en ölümcül terör
+      eylemi oldu. Anlık tepkiler arasında Al-Kaide'ye ev sahipliği yapan Taliban yönetimini
+      devirmeye yönelik ABD'nin Afganistan işgali, USA PATRIOT Yasası'nın çıkarılması ve
+      İç Güvenlik Bakanlığı'nın kurulması yer aldı.
+
+      Saldırılar, ABD'nin iç ve dış politikasını köklü biçimde dönüştürdü. "Terörle Küresel
+      Savaş" Afganistan'da yirmi yılı aşkın askeri operasyonlara yol açtı ve 2003 Irak
+      işgalini beraberinde getirdi. Toplu gözetleme, süresiz tutukluluk ve olağanüstü iade
+      uygulamaları etrafındaki sivil özgürlük tartışmaları günümüz politika gündemlerinde
+      yankılanmaya devam etmektedir.

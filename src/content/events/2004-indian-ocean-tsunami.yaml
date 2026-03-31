@@ -53,3 +53,29 @@ sources:
     url: "https://earthquake.usgs.gov/earthquakes/eventpage/usp000d6bf/executive"
   - label: "UNESCO Indian Ocean Tsunami Warning System"
     url: "https://www.ioc-tsunami.org"
+
+translations:
+  tr:
+    title: "2004 Hint Okyanusu Tsunamisi"
+    summary: >
+      26 Aralık 2004'te Sumatra açıklarında meydana gelen 9,1 büyüklüğündeki bir denizaltı
+      depremi, Hint Okyanusu çevresindeki 14 ülkeyi vuran dev tsunamilere yol açtı.
+      Kayıtlı tarihin en ölümcül doğal afetlerinden biri olan bu felakette yaklaşık
+      227.898 kişi hayatını kaybetti.
+    body: |
+      Kaydedilen üçüncü büyük deprem olan bu felaket, Hint Okyanusu'nun altında 1.200
+      kilometre uzunluğunda bir fay hattını parçaladı. Kimi yerlerde 30 metreye ulaşan dev
+      dalgalar, saatler içinde Endonezya, Sri Lanka, Hindistan, Tayland, Somali, Maldivler
+      ve daha pek çok ülkenin kıyılarına çarptı.
+
+      Endonezya en ağır kaybı yaşadı; çoğunluğu Açe eyaletinde olmak üzere yaklaşık
+      168.000 kişi hayatını kaybetti. Sri Lanka'da yaklaşık 35.000, Hindistan'da 12.400 ve
+      Tayland'da yabancı turistler de dahil 5.000'den fazla kişi öldü. Somali, deprem
+      merkezinden 6.000 km uzakta olmasına karşın yaklaşık 300 can kaybı yaşadı.
+
+      Felaket, o güne kadarki en büyük uluslararası insani yardım seferberliğini harekete
+      geçirdi: 14 milyar ABD Dolarının üzerinde yardım taahhüt edildi. Aynı zamanda 2006'da
+      faaliyete geçen Hint Okyanusu Tsunami Uyarı Sistemi'nin kurulmasını da hızlandırdı.
+
+      Afet, afete hazırlık, tsunami riski taşıyan bölgelerdeki kıyı yapılaşması ve erken
+      uyarı sistemlerinin uluslararası koordinasyonu konularındaki tartışmaları alevlendirdi.

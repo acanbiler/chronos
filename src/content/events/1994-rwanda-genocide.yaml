@@ -61,3 +61,32 @@ sources:
     url: "https://unictr.irmct.org"
   - label: "Human Rights Watch — Leave None to Tell the Story"
     url: "https://www.hrw.org/reports/1999/rwanda"
+
+translations:
+  tr:
+    title: "Ruanda Soykırımı"
+    summary: >
+      Yaklaşık 100 günde, Hutu aşırıcı milislerin sistematik bir kampanyasıyla 500.000 ile
+      800.000 arasında Tutsi ve ılımlı Hutu katledildi. Soykırım, uluslararası toplumun
+      büyük ölçüde seyirci kalmasıyla birlikte yaşandı.
+    body: |
+      Soykırım, 6 Nisan 1994'te Cumhurbaşkanı Juvénal Habyarimana'nın uçağının Kigali
+      üzerinde düşürülmesiyle başladı. Saatler içinde Interahamwe milisi ve Ruanda Silahlı
+      Kuvvetleri unsurları Tutsi sivilleri sistematik biçimde öldürmeye başladı; ülke
+      genelinde barikatlar kuruldu ve radyo yayınları "inyenzi" (hamamböcekleri — Tutsi için
+      kullanılan insanlık dışı bir terim) lerinin öldürülmesini körükledi.
+
+      Ruanda'daki BM Barış Gücü (UNAMIR), Güvenlik Konseyi tarafından sivilleri korumak
+      amacıyla güç kullanmaktan men edildi. On Belçikalı barış görevlisinin öldürülmesinin
+      ardından Belçika kuvvetleri çekildi. ABD ve diğer Batılı hükümetler, 1948 Soykırım
+      Sözleşmesi kapsamındaki yükümlülüklerden kaçınmak amacıyla "soykırım" sözcüğünü
+      bilinçli olarak kullanmaktan kaçındı.
+
+      Soykırım, ancak ağırlıklı olarak Tutsilerden oluşan silahlı grup olan Ruanda Vatansever
+      Cephesi (RVF) hükümeti ve milis kuvvetlerini yenip Temmuz 1994'te Kigali'yi ele
+      geçirdiğinde son buldu. Sonrasında misilleme korkusuyla iki milyondan fazla Hutu komşu
+      Zaire'ye (bugünkü Demokratik Kongo Cumhuriyeti) sığındı.
+
+      Ruanda için Uluslararası Ceza Mahkemesi (RUCM), soykırım, insanlığa karşı suçlar ve
+      savaş suçlarından 93 kişiyi yargıladı. Ruanda hükümetinin gacaca mahkemesi sistemi ise
+      topluluk düzeyinde 1,9 milyonun üzerinde davayı sonuçlandırdı.

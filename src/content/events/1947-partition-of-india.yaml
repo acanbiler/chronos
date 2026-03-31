@@ -53,3 +53,28 @@ sources:
     url: "https://www.1947partitionarchive.org"
   - label: "Partition — BBC History"
     url: "https://www.bbc.co.uk/history/british/modern/partition1947_01.shtml"
+
+translations:
+  tr:
+    title: "Hindistan'ın Bölünmesi"
+    summary: >
+      Ağustos 1947'de İngiliz egemenliğinin sona ermesiyle birlikte Hindistan alt kıtasında
+      eş zamanlı olarak iki bağımsız devlet kuruldu: Hindistan ve Pakistan. Bu süreç,
+      200.000 ile 2 milyon arasında insanın hayatını kaybettiği ve 10–20 milyon kişinin
+      yerinden edildiği insanlık tarihinin en büyük ve kanlı kitlesel göçlerinden birini
+      tetikledi.
+    body: |
+      Bölünme, Britanya Hindistan İmparatorluğu'nun dağılmasının doğrudan sonucuydu. Hindistan
+      ile Pakistan arasındaki sınır olan Radcliffe Hattı, Pencap ve Bengal'i iki yeni devlet
+      arasında bölerek yerel istişare yapılmaksızın Sir Cyril Radcliffe tarafından yalnızca
+      beş haftada çizildi.
+
+      Hindular, Müslümanlar ve Sikhler kendilerini yeni sınırların "yanlış" tarafında
+      bulunca toplumlar arası şiddet büyük ölçekte patlak verdi. Yüzlerce mil uzunluğundaki
+      mülteci kafileleri her iki yönde hareket etti. Kadınlar ve kız çocukları kitlesel
+      biçimde kaçırıldı ve saldırıya uğradı; köylerin tamamı katledildi.
+
+      14–17 milyona kadar kişinin yerinden edilmesi, kayıtlı tarihin en büyük kitlesel göçü
+      olma özelliğini korumaktadır. Bölünmenin yarattığı travma; üç sonraki savaşı ve o
+      günden bu yana bir çatışma noktası olmayı sürdüren çözümsüz Keşmir meselesini de
+      kapsayan Hindistan–Pakistan ilişkilerini şekillendirmeye devam etmektedir.

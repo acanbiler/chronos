@@ -60,3 +60,36 @@ sources:
     url: "https://www.brookings.edu/research/the-arab-spring-five-years-later/"
   - label: "Syria conflict — UN OCHA"
     url: "https://www.unocha.org/syria"
+
+translations:
+  tr:
+    title: "Arap Baharı"
+    summary: >
+      Aralık 2010'da Tunuslu seyyar satıcı Muhammed Buazizi'nin kendini ateşe vermesiyle
+      başlayan demokratikleşme protestoları ve ayaklanmaları Arap dünyasını sardı. Devrimler
+      Tunus, Mısır, Libya ve Yemen'de uzun süredir iktidarda olan liderleri devirerek Suriye'de
+      bugün hâlâ süren yıkıcı bir iç savaşı fitilledi.
+    body: |
+      Arap Baharı, seyyar satıcı Muhammed Buazizi'nin 17 Aralık 2010'da polis tacizini ve
+      yolsuzluğu protesto etmek için Tunus'un Sidi Buzid şehrinde kendini ateşe vermesiyle
+      başladı. Bu eylem; 23 yıldır iktidarda olan Cumhurbaşkanı Zeynelabidin bin Ali'yi
+      Ocak 2011'de görevden eden kitlesel gösterileri alevlendirdi.
+
+      Mısır'da Tahrir Meydanı'ndaki 18 günlük protesto, 30 yıldır iktidarda olan
+      Cumhurbaşkanı Hüsnü Mübarek'in 11 Şubat 2011'de istifasıyla son buldu. Libya'da
+      Muammer Kaddafi'ye karşı başlayan ayaklanma iç savaşa dönüştü; NATO hava kampanyası
+      isyancıları destekledi ve Kaddafi Ekim 2011'de yakalanarak öldürüldü. Yemen
+      Cumhurbaşkanı Ali Abdullah Salih, protestolar ve silahlı ayaklanmanın ortasında 2011'de
+      çekilmeyi kabul etti.
+
+      Suriye'de barışçıl protestolar, hükümetin şiddetli müdahalesiyle karşılanarak 2011'de
+      tam anlamıyla iç savaşa dönüştü; çatışmaya bölgesel güçler, cihatçı gruplar ve
+      nihayetinde Rus askeri müdahalesi de dahil oldu. Savaşın yaklaşık 500.000 kişinin
+      hayatını kaybetmesine yol açtığı ve 12 milyonun üzerinde insanı yerinden ettiği
+      tahmin edilmektedir.
+
+      Arap dünyasında demokratik geçişe ilişkin başlangıçtaki iyimserlik büyük ölçüde
+      hayal kırıklığına dönüştü: Mısır 2013'te askeri yönetime döndü, Libya uzun soluklu
+      hizip çatışmasına sürüklendi ve Yemen insani açıdan yıkıcı bir krizin merkezi haline
+      geldi. Tunus'un demokratik deneyimi kayda değer bir istisna oluşturduysa da 2021'den
+      itibaren ciddi bir geri çekilme yaşandı.

@@ -56,3 +56,35 @@ sources:
     url: "https://ukraine.un.org/en/sdgs/16"
   - label: "Ukraine Support Tracker — Kiel Institute"
     url: "https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/"
+
+translations:
+  tr:
+    title: "Rusya'nın Ukrayna'yı İşgali"
+    summary: >
+      24 Şubat 2022'de Rusya, Ukrayna'ya yönelik tam kapsamlı bir işgal başlattı — bu,
+      İkinci Dünya Savaşı'ndan bu yana Avrupa'da gerçekleşen en büyük askeri harekâttı.
+      2014'teki Kırım ilhakının ve Doğu Ukrayna'daki ayrılıkçılara verilen desteğin
+      ardından başlayan çatışma, on binlerce kişinin hayatını kaybetmesine ve 14 milyonun
+      üzerinde insanın yerinden edilmesine yol açtı.
+    body: |
+      Rusya, 2021'in sonlarından itibaren Ukrayna sınırlarına asker yığmaya başlamıştı.
+      Cumhurbaşkanı Vladimir Putin, işgal öncesi açıklamasında Ukrayna'nın meşru bir
+      devlet kimliği taşımadığını öne sürerek NATO'yu Rus güvenliğini tehdit etmekle suçladı.
+      İşgal, 24 Şubat 2022'nin ilk saatlerinde Ukrayna şehirlerine füze saldırıları ve Rusya
+      topraklarından, Kırım'dan ve Belarus'tan ilerleyen kara kuvvetleriyle başladı.
+
+      Ukrayna direncinin hızla çöküşeceği beklentisi gerçekleşmedi. Rusya'nın Kyiv'e yönelik
+      ilk saldırısı püskürtüldü; NATO üyelerinden silah desteği alan Ukrayna kuvvetleri,
+      Eylül 2022'de Harkiv oblastında ve Kasım 2022'de Herson şehrinde önemli toprakları
+      geri alan başarılı karşı saldırılar düzenledi.
+
+      Batılı ülkeler, Rusya'nın merkez bankası rezervlerini, enerji ihracatını ve kilit
+      bireyleri hedef alan tarihte bir büyük ekonomiye uygulanan en kapsamlı yaptırımları
+      devreye soktu. Avrupa Birliği ve Amerika Birleşik Devletleri, 2023 sonuna kadar
+      Ukrayna'ya 100 milyar doların üzerinde askeri ve ekonomik yardım sağladı.
+
+      Çatışma, her iki tarafta da on binlerce askeri can kaybına ve 14 milyonun üzerinde
+      Ukraynalının yerinden edilmesine yol açtı — bu, İkinci Dünya Savaşı'ndan bu yana
+      Avrupa'nın en büyük mülteci krizi olma özelliği taşımaktadır. Savaşın seyri belirsizliğini
+      korumakta; çatışma Doğu ve Güney Ukrayna'daki tartışmalı cephe hattı boyunca
+      sürmektedir.

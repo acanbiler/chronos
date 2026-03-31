@@ -58,3 +58,34 @@ sources:
     url: "https://www.britannica.com/event/Korean-War"
   - label: "UN Korean War documentation"
     url: "https://www.un.org/en/about-us/history/korean-war"
+
+translations:
+  tr:
+    title: "Kore Savaşı"
+    summary: >
+      Kore Savaşı, Sovyetler Birliği ve Çin destekli Kuzey Kore kuvvetlerinin 25 Haziran
+      1950'de Güney Kore'yi işgal etmesiyle başladı. ABD liderliğindeki BM koalisyonu işgali
+      püskürtse de üç yıllık çatışma, yarımadayı bugün hâlâ yürürlükte olan bir ateşkes —
+      barış antlaşması değil — ile 38. paralel boyunca bölünmüş halde bıraktı.
+    body: |
+      İkinci Dünya Savaşı'nda Japonya'nın yenik düşmesinin ardından Kore, 38. paralel
+      boyunca Sovyet ve Amerikan işgal bölgelerine ayrıldı; bu bölgeler zamanla kuzeyde
+      komünist Kore Demokratik Halk Cumhuriyeti'ne ve güneyde Kore Cumhuriyeti'ne dönüştü.
+      Kuzey Kore'nin 25 Haziran 1950'de sınırı Sovyet zırhlılarıyla geçmesiyle gerilim
+      tam ölçekli savaşa dönüştü.
+
+      BM Güvenlik Konseyi 83 sayılı kararla askeri müdahaleye yetki verdi (SSCB o sırada
+      Konseyi boykot ediyordu). General Douglas MacArthur komutasındaki BM kuvvetleri,
+      Eylül 1950'de cesur bir amfibi çıkarma harekâtıyla Inchon'u geri aldı ve hızla Çin
+      sınırına doğru ilerledi. Çin, Ekim 1950'de yaklaşık 300.000 askerle savaşa girerek
+      BM'yi geri çekilmeye zorladı.
+
+      Savaş, 1951–1953 yıllarının büyük bölümünde özgün 38. paralel yakınında kanlı bir
+      çıkmaza dönüştü. Ateşkes 27 Temmuz 1953'te imzalanarak Askerden Arındırılmış Bölge
+      (DMZ) oluşturuldu. Yaklaşık 36.000 Amerikalı, 137.000 Güney Koreli ve tahminen
+      1,5 milyon Çinli ile Kuzey Koreli asker hayatını kaybetti; yaklaşık iki milyon
+      Koreli sivil de bu kayıplar arasındaydı.
+
+      Hiçbir zaman resmi bir barış antlaşması imzalanmadı. Kuzey Kore dünyanın en izole
+      ülkelerinden biri olmaya devam etmekte; 1953 ateşkesi hâlâ çatışmayı sona erdiren
+      tek yasal belge olma özelliğini korumaktadır.

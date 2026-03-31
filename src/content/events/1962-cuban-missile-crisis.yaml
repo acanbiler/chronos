@@ -55,3 +55,30 @@ sources:
     url: "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis"
   - label: "National Security Archive — Cuban Missile Crisis"
     url: "https://nsarchive.gwu.edu/project/cuban-missile-crisis"
+
+translations:
+  tr:
+    title: "Küba Füze Krizi"
+    summary: >
+      Ekim 1962'de ABD keşif uçakları Küba'ya yerleştirilen Sovyet balistik füzelerini
+      tespit ettikten sonra, Amerika Birleşik Devletleri ile Sovyetler Birliği tarihin
+      hiçbir döneminde olmadığı kadar nükleer savaşa yaklaştı. Kriz, doğrudan müzakereler
+      ve karşılıklı tavizlerle çözüme kavuşturuldu.
+    body: |
+      Kriz, U-2 casus uçağının fotoğraflarının Küba'da inşa halindeki Sovyet orta ve orta
+      menzilli balistik füze üslerini ortaya koymasıyla başladı. Başkan Kennedy; deniz
+      ablukasından hava saldırılarına ya da işgale uzanan seçenekleri değerlendirmek üzere
+      acil bir danışma grubu (ExComm) topladı.
+
+      Kennedy 22 Ekim'de Küba'ya deniz "karantinası" ilan ederek Sovyetlerin füzeleri
+      söküp geri götürmesini talep etti. Ek askeri teçhizat taşıyan Sovyet gemileri deniz
+      kordonuna yaklaşmadan önce geri döndü.
+
+      Çözüm, arka kanal diplomasiyle sağlandı: SSCB, ABD'nin Küba'yı işgal etmeyeceğine
+      dair güvencesi ve Türkiye'deki ABD Jupiter füzelerinin gizlice kaldırılması
+      karşılığında füzeleri söküp götürmeyi kabul etti.
+
+      Kriz, silah kontrolü diplomasisini hızlandırdı. Beyaz Saray ile Kremlin arasındaki
+      "kırmızı hat" 1963'te kuruldu; aynı yıl Kısmi Nükleer Deneme Yasağı Antlaşması
+      imzalandı. Kriz, nükleer caydırıcılık, kriz yönetimi ve diplomatik gerilim azaltma
+      konularında temel bir vaka çalışması olmaya devam etmektedir.

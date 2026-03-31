@@ -55,3 +55,30 @@ sources:
     url: "https://www.britannica.com/event/Cultural-Revolution"
   - label: "Harvard University Press — Cultural Revolution"
     url: "https://www.hup.harvard.edu/catalog.php?isbn=9780674967946"
+
+translations:
+  tr:
+    title: "Çin Kültür Devrimi"
+    summary: >
+      Mao Zedong tarafından Mayıs 1966'da başlatılan Kültür Devrimi, Çin toplumundaki
+      "burjuva" unsurları tasfiye etmeyi amaçlayan on yıllık şiddetli bir siyasi ve
+      toplumsal çalkantı dönemiydi. Kızıl Muhafızlar kültürel eserleri yıktı, aydınları
+      zulme uğrattı ve "karşı devrimcilere" saldırdı; yüz binlerden iki milyona kadar
+      kişinin hayatını kaybetmesine yol açtı.
+    body: |
+      Kültür Devrimi, Mao Zedong'un yıkıcı Büyük İleri Atılım'ın ardından otoritesini
+      yeniden pekiştirme çabasından doğdu. Mao, öğretmenlere, yetkililere ve yeterince
+      devrimci olmadığı düşünülen herkese saldıran genç öğrencileri — Kızıl Muhafızlar'ı —
+      harekete geçirdi. Okullar ve üniversiteler kapatıldı, aydınlar kırsal "yeniden
+      eğitim" kamplarına gönderildi, dini mekânlar ve tarihi anıtlar tahrip edildi.
+
+      Rakip Kızıl Muhafız grupları arasındaki hizip şiddeti binlerce kişiyi öldürdü.
+      Halk Kurtuluş Ordusu düzeni yeniden sağlamak için sonunda müdahale etmek zorunda
+      kaldı. En radikal evre (1966–1969), Mao'nun Eylül 1976'daki ölümüne kadar süren daha
+      kontrollü ancak yine de baskıcı bir döneme bıraktı. Mao'nun eşi Jiang Qing liderliğindeki
+      Dörtlü Çete, birkaç hafta sonra tutuklandı.
+
+      Çin Komünist Partisi, Kültür Devrimi'ni 1981'de "Parti ve halk için ağır bir gerileme
+      ve kayıp" olarak nitelendirdi; Mao'nun genel mirasını korurken birincil sorumluluğu
+      ona yükledi. Tarihçiler, 1–2 milyon doğrudan ölümü tahmin etmekte; onlarca milyon
+      kişinin ise zorla çalışmaya, hapse atılmaya ve zulme maruz kaldığını belirtmektedir.
