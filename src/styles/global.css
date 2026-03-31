@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Dark mode via class strategy */
+@variant dark (&:where(.dark, .dark *));
+
+/* Custom theme tokens */
+@theme {
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
