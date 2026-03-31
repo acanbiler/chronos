@@ -7,12 +7,16 @@ interface Props {
 
 const { slug } = Astro.props;
 const category = categories.find((c) => c.slug === slug);
-const label = category?.label ?? slug;
-const color = category?.color ?? '#6b7280';
+const label    = category?.label    ?? slug;
+const labelTr  = category?.label_tr ?? label;
+const color    = category?.color    ?? '#6b7280';
+
+// Sanitize quotes to prevent breaking x-text expression
+const safeLabel   = label.replace(/'/g, "\\'");
+const safeLabelTr = labelTr.replace(/'/g, "\\'");
 ---
 <span
   class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
   style={`background-color: ${color};`}
->
-  {label}
-</span>
+  x-text={`$store.i18n.lang === 'tr' ? '${safeLabelTr}' : '${safeLabel}'`}
+>{label}</span>

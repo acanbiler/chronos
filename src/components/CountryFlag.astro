@@ -6,13 +6,17 @@ interface Props {
 }
 
 const { code } = Astro.props;
-const country = countries.find((c) => c.code === code);
-const name = country?.name ?? code;
-const flag = country?.flag;
+const country  = countries.find((c) => c.code === code);
+const name     = country?.name    ?? code;
+const nameTr   = country?.name_tr ?? name;
+const flag     = country?.flag;
+
+const safeName   = name.replace(/'/g, "\\'");
+const safeNameTr = nameTr.replace(/'/g, "\\'");
 ---
-<span class="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
+<span class="inline-flex items-center gap-1 text-sm text-stone-600 dark:text-stone-400">
   {flag
     ? <span role="img" aria-label={`${name} flag`}>{flag}</span>
     : null}
-  <span>{name}</span>
+  <span x-text={`$store.i18n.lang === 'tr' ? '${safeNameTr}' : '${safeName}'`}>{name}</span>
 </span>
