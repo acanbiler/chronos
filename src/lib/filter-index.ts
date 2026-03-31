@@ -17,9 +17,14 @@ export function buildEventIndex(events: any[]): EventIndexRecord[] {
   return events.map(({ id, data: e }) => {
     const yearFrom = extractEventYear(e.date);
     const yearTo   = e.date_end ? extractEventYear(e.date_end) : yearFrom;
-    const searchText = [e.title, e.summary, ...(e.tags ?? []), e.region ?? '']
-      .join(' ')
-      .toLowerCase();
+    const searchText = [
+      e.title,
+      e.summary,
+      ...(e.tags ?? []),
+      e.region ?? '',
+      e.translations?.tr?.title ?? '',
+      e.translations?.tr?.summary ?? '',
+    ].join(' ').toLowerCase();
     return {
       slug: id,
       title: e.title,

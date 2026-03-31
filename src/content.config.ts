@@ -7,6 +7,12 @@ const eventDate = z.string().regex(
   'Use YYYY, YYYY-MM, or YYYY-MM-DD'
 );
 
+const translationBlock = z.object({
+  title: z.string(),
+  summary: z.string(),
+  body: z.string().optional(),
+}).optional();
+
 const events = defineCollection({
   loader: glob({ pattern: '**/*.yaml', base: './src/content/events' }),
   schema: z.object({
@@ -31,6 +37,9 @@ const events = defineCollection({
       src: z.string(),
       alt: z.string(),
       credit: z.string().optional(),
+    }).optional(),
+    translations: z.object({
+      tr: translationBlock,
     }).optional(),
   }),
 });
