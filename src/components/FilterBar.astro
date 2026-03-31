@@ -1,19 +1,18 @@
 ---
 import { categories } from '../data/categories';
-import { countries } from '../data/countries';
 ---
 <aside aria-label="Filters" class="lg:w-72 lg:flex-shrink-0">
   <!-- Mobile toggle button (< lg) -->
   <div class="lg:hidden mb-4">
     <button
       @click="mobileOpen = !mobileOpen"
-      class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
+      class="flex items-center gap-2 px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-700 text-sm font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
     >
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18M7 12h10M11 20h2" />
       </svg>
-      <span x-text="mobileOpen ? 'Hide Filters' : 'Show Filters'">Show Filters</span>
-      <span class="ml-auto text-xs text-gray-500 dark:text-gray-400" x-text="`(${visibleSlugs.size} events)`"></span>
+      <span x-text="mobileOpen ? $store.i18n.t.hide_filters : $store.i18n.t.show_filters">Show Filters</span>
+      <span class="ml-auto text-xs text-stone-500 dark:text-stone-400" x-text="`(${visibleSlugs.size})`"></span>
     </button>
   </div>
 
@@ -21,78 +20,72 @@ import { countries } from '../data/countries';
   <div
     x-show="mobileOpen || window.innerWidth >= 1024"
     x-transition
-    class="lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto space-y-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-5"
+    class="lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto space-y-5 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-5"
   >
     <div class="flex items-center justify-between">
-      <h2 class="font-semibold text-gray-900 dark:text-gray-100">Filters</h2>
-      <span class="hidden lg:block text-xs text-gray-500 dark:text-gray-400" x-text="`${visibleSlugs.size} events`"></span>
+      <h2 class="font-semibold text-stone-900 dark:text-stone-100" x-text="$store.i18n.t.filters">Filters</h2>
+      <span class="hidden lg:block text-xs text-stone-500 dark:text-stone-400" x-text="$store.i18n.t.events_count.replace('{n}', visibleSlugs.size)"></span>
     </div>
 
     <!-- Search -->
-    <div>
-      <label for="filter-search" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Search</label>
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4">
+      <label for="filter-search" class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1.5" x-text="$store.i18n.t.search_label">Search</label>
       <input
         id="filter-search"
         type="text"
         x-model="search"
-        placeholder="Search events…"
-        class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        :placeholder="$store.i18n.t.search_placeholder"
+        class="w-full rounded-lg border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800 text-sm px-3 py-2 text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
 
-    <!-- Categories -->
-    <div>
-      <fieldset>
-        <legend class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Categories</legend>
-        <div class="space-y-2">
-          {categories.map((cat) => (
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input
-                type="checkbox"
-                value={cat.slug}
-                x-model="categories"
-                class="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
-              />
-              <span
-                class="inline-block w-2 h-2 rounded-full flex-shrink-0"
-                style={`background-color: ${cat.color};`}
-                aria-hidden="true"
-              ></span>
-              <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                {cat.label}
-              </span>
-            </label>
-          ))}
-        </div>
-      </fieldset>
+    <!-- Categories — pill-toggle -->
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4">
+      <p class="text-sm font-medium text-stone-700 dark:text-stone-300 mb-2.5" x-text="$store.i18n.t.categories">Categories</p>
+      <div class="flex flex-wrap gap-2">
+        {categories.map((cat) => (
+          <button
+            type="button"
+            @click={`const i = categories.indexOf('${cat.slug}'); i >= 0 ? categories.splice(i, 1) : categories.push('${cat.slug}')`}
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
+            :class={`categories.includes('${cat.slug}') ? 'text-white border-transparent' : 'bg-stone-100 dark:bg-stone-800 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:border-stone-400'`}
+            :style={`categories.includes('${cat.slug}') ? 'background-color: ${cat.color}; border-color: ${cat.color};' : ''`}
+            :aria-pressed={`categories.includes('${cat.slug}').toString()`}
+          >
+            <span class="w-2 h-2 rounded-full flex-shrink-0" style={`background-color: ${cat.color};`} aria-hidden="true"></span>
+            <span x-text={`$store.i18n.lang === 'tr' ? '${cat.label_tr.replace(/'/g, "\\'")}' : '${cat.label.replace(/'/g, "\\'")}'`}>{cat.label}</span>
+          </button>
+        ))}
+      </div>
     </div>
 
     <!-- Severity -->
-    <div>
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4">
       <fieldset>
-        <legend class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Severity</legend>
+        <legend class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2.5" x-text="$store.i18n.t.severity">Severity</legend>
         <div class="space-y-2">
           {[
-            { value: 'info',     label: 'Info',     color: '#3b82f6' },
-            { value: 'warning',  label: 'Warning',  color: '#f59e0b' },
-            { value: 'severe',   label: 'Severe',   color: '#f97316' },
-            { value: 'critical', label: 'Critical', color: '#ef4444' },
+            { value: 'info',     color: '#3b82f6' },
+            { value: 'warning',  color: '#f59e0b' },
+            { value: 'severe',   color: '#f97316' },
+            { value: 'critical', color: '#ef4444' },
           ].map((sev) => (
             <label class="flex items-center gap-2 cursor-pointer group">
               <input
                 type="checkbox"
                 value={sev.value}
                 x-model="severities"
-                class="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
+                class="rounded border-stone-300 dark:border-stone-600 text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
               />
               <span
                 class="inline-block w-2 h-2 rounded-full flex-shrink-0"
                 style={`background-color: ${sev.color};`}
                 aria-hidden="true"
               ></span>
-              <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                {sev.label}
-              </span>
+              <span
+                class="text-sm text-stone-700 dark:text-stone-300 group-hover:text-stone-900 dark:group-hover:text-stone-100"
+                x-text={`$store.i18n.t.severity_${sev.value}`}
+              >{sev.value}</span>
             </label>
           ))}
         </div>
@@ -100,52 +93,88 @@ import { countries } from '../data/countries';
     </div>
 
     <!-- Date range -->
-    <div>
-      <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Date Range</p>
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4">
+      <p class="text-sm font-medium text-stone-700 dark:text-stone-300 mb-2.5" x-text="$store.i18n.t.date_range">Date Range</p>
       <div class="flex gap-2 items-center">
-        <label class="sr-only" for="filter-year-from">From year</label>
+        <label class="sr-only" for="filter-year-from" x-text="$store.i18n.t.date_from">From year</label>
         <input
           id="filter-year-from"
           type="number"
           x-model.number="yearFrom"
-          placeholder="From"
+          :placeholder="$store.i18n.t.date_from"
           min="1900"
           max="2100"
-          class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full rounded-lg border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800 text-sm px-3 py-2 text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <span class="text-gray-400 dark:text-gray-600 text-sm flex-shrink-0">–</span>
-        <label class="sr-only" for="filter-year-to">To year</label>
+        <span class="text-stone-400 dark:text-stone-600 text-sm flex-shrink-0">–</span>
+        <label class="sr-only" for="filter-year-to" x-text="$store.i18n.t.date_to">To year</label>
         <input
           id="filter-year-to"
           type="number"
           x-model.number="yearTo"
-          placeholder="To"
+          :placeholder="$store.i18n.t.date_to"
           min="1900"
           max="2100"
-          class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full rounded-lg border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800 text-sm px-3 py-2 text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
     </div>
 
-    <!-- Countries -->
-    <div>
-      <label for="filter-country" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Countries</label>
-      <select
-        id="filter-country"
-        multiple
-        x-model="countries"
-        class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm px-3 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
-      >
-        {countries.map((country) => (
-          <option value={country.code}>{country.flag} {country.name}</option>
-        ))}
-      </select>
-      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Ctrl/Cmd+click to select multiple</p>
+    <!-- Countries — searchable tag-input -->
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4">
+      <p class="text-sm font-medium text-stone-700 dark:text-stone-300 mb-2.5" x-text="$store.i18n.t.countries">Countries</p>
+
+      <!-- Selected tags -->
+      <div class="flex flex-wrap gap-1.5 mb-2" x-show="countries.length > 0">
+        <template x-for="code in countries" :key="code">
+          <span class="inline-flex items-center gap-1 pl-2 pr-1 py-0.5 text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 rounded-full">
+            <span x-text="allCountries.find(c => c.code === code)?.flag ?? ''"></span>
+            <span x-text="($store.i18n.lang === 'tr' ? allCountries.find(c => c.code === code)?.name_tr : null) ?? allCountries.find(c => c.code === code)?.name ?? code"></span>
+            <button
+              @click="countries.splice(countries.indexOf(code), 1)"
+              class="ml-0.5 p-0.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
+              :aria-label="`Remove ${code}`"
+            >
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </span>
+        </template>
+      </div>
+
+      <!-- Search input + dropdown -->
+      <div class="relative" @click.outside="countryDropdownOpen = false">
+        <input
+          type="text"
+          x-model="countrySearch"
+          @focus="countryDropdownOpen = true"
+          :placeholder="$store.i18n.t.country_search_placeholder"
+          class="w-full rounded-lg border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800 text-sm px-3 py-2 text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <div
+          x-show="countryDropdownOpen && filteredCountries.length > 0"
+          class="absolute z-20 w-full mt-1 max-h-44 overflow-y-auto bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg shadow-lg"
+        >
+          <template x-for="country in filteredCountries" :key="country.code">
+            <button
+              type="button"
+              @click="if (!countries.includes(country.code)) countries.push(country.code); countrySearch = ''; countryDropdownOpen = false;"
+              class="w-full flex items-center gap-2 px-3 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors text-left"
+              :class="countries.includes(country.code) ? 'opacity-50 cursor-not-allowed' : ''"
+            >
+              <span x-text="country.flag"></span>
+              <span x-text="$store.i18n.lang === 'tr' ? (country.name_tr ?? country.name) : country.name"></span>
+              <span x-show="countries.includes(country.code)" class="ml-auto text-blue-600 text-xs">✓</span>
+            </button>
+          </template>
+        </div>
+      </div>
     </div>
 
     <!-- Ongoing toggle -->
-    <div class="flex items-center justify-between">
-      <label for="filter-ongoing" class="text-sm font-medium text-gray-700 dark:text-gray-300">
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4 flex items-center justify-between">
+      <label for="filter-ongoing" class="text-sm font-medium text-stone-700 dark:text-stone-300" x-text="$store.i18n.t.ongoing_only">
         Ongoing events only
       </label>
       <button
@@ -154,7 +183,7 @@ import { countries } from '../data/countries';
         :aria-checked="ongoingOnly.toString()"
         @click="ongoingOnly = !ongoingOnly"
         class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-        :class="ongoingOnly ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'"
+        :class="ongoingOnly ? 'bg-blue-600' : 'bg-stone-200 dark:bg-stone-700'"
       >
         <span
           class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
@@ -164,11 +193,12 @@ import { countries } from '../data/countries';
     </div>
 
     <!-- Reset button -->
-    <button
-      @click="resetFilters()"
-      class="w-full px-4 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
-    >
-      Reset Filters
-    </button>
+    <div class="border-t border-stone-100 dark:border-stone-800 pt-4">
+      <button
+        @click="resetFilters()"
+        class="w-full px-4 py-2 rounded-lg text-sm font-medium text-stone-700 dark:text-stone-300 border border-stone-300 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
+        x-text="$store.i18n.t.reset_filters"
+      >Reset Filters</button>
+    </div>
   </div>
 </aside>

@@ -4,9 +4,18 @@ import FilterBar from '../components/FilterBar.astro';
 import TimelineTrack from '../components/TimelineTrack.astro';
 import { getCollection } from 'astro:content';
 import { buildEventIndex } from '../lib/filter-index';
+import { countries } from '../data/countries';
 
 const allEvents = await getCollection('events');
 const eventIndex = buildEventIndex(allEvents);
+
+// Embed minimal country data for tag-input (flag, name, name_tr, code)
+const countriesForClient = countries.map(c => ({
+  code: c.code,
+  name: c.name,
+  name_tr: c.name_tr,
+  flag: c.flag,
+}));
 
 const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
 ---
@@ -15,24 +24,24 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
   description="A visual timeline of historical and ongoing world events, organised by category, country, and date."
   canonicalUrl={siteUrl}
 >
-  <!-- Embed event index for Alpine -->
   <script type="application/json" id="event-index" set:html={JSON.stringify(eventIndex)} />
 
   <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <header class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">World Events Timeline</h1>
-      <p class="mt-2 text-gray-600 dark:text-gray-400">
+      <h1 class="text-3xl font-bold text-stone-900 dark:text-stone-100" x-text="$store.i18n.t.nav_title">
+        World Events Timeline
+      </h1>
+      <p
+        class="mt-2 text-stone-600 dark:text-stone-400"
+        x-text="$store.i18n.t.all_events_count.replace('{n}', $data.index.length || 0)"
+      >
         Historical and ongoing events — {allEvents.length} total
       </p>
     </header>
 
-    <!--
-      x-data lives here so both FilterBar and TimelineTrack share the same Alpine scope.
-      FilterBar reads/writes state; TimelineTrack reacts via $data.visibleSlugs.
-    -->
     <div
       class="flex flex-col lg:flex-row gap-8"
-      x-data="{
+      x-data={`{
         search: '',
         categories: [],
         countries: [],
@@ -43,6 +52,19 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
         visibleSlugs: new Set(),
         index: [],
         mobileOpen: false,
+        allCountries: ${JSON.stringify(countriesForClient)},
+        countrySearch: '',
+        countryDropdownOpen: false,
+
+        get filteredCountries() {
+          const q = this.countrySearch.toLowerCase();
+          if (!q) return this.allCountries;
+          return this.allCountries.filter(c =>
+            c.name.toLowerCase().includes(q) ||
+            c.code.toLowerCase().includes(q) ||
+            (c.name_tr && c.name_tr.toLowerCase().includes(q))
+          );
+        },
 
         init() {
           this.index = JSON.parse(document.getElementById('event-index').textContent);
@@ -110,7 +132,7 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
           this.search = ''; this.categories = []; this.countries = [];
           this.severities = []; this.yearFrom = null; this.yearTo = null; this.ongoingOnly = false;
         },
-      }"
+      }`}
     >
       <FilterBar />
       <div class="flex-1 min-w-0">
