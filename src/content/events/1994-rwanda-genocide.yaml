@@ -1,0 +1,63 @@
+title: "Rwandan Genocide"
+date: "1994-04-07"
+date_end: "1994-07-15"
+date_display: "April–July 1994"
+approximate: false
+
+summary: >
+  In approximately 100 days, an estimated 500,000 to 800,000 Tutsi and
+  moderate Hutu were killed in a systematic campaign orchestrated by Hutu
+  extremist militias. The genocide unfolded while the international community
+  largely stood aside.
+
+body: |
+  The genocide was triggered by the assassination of President Juvénal
+  Habyarimana on April 6, 1994, when his plane was shot down over Kigali.
+  Within hours, the Interahamwe militia and elements of the Rwandan Armed
+  Forces began systematically killing Tutsi civilians, roadblocks were erected
+  across the country, and radio broadcasts urged the murder of the "inyenzi"
+  (cockroaches — the dehumanising term used for Tutsi).
+
+  The UN peacekeeping force in Rwanda, UNAMIR, was forbidden by the Security
+  Council from using force to protect civilians. Belgian peacekeepers were
+  withdrawn after ten were murdered. The United States and other Western
+  governments deliberately avoided using the word "genocide" to circumvent
+  obligations under the 1948 Genocide Convention.
+
+  The genocide ended only when the Rwandan Patriotic Front (RPF), a
+  predominantly Tutsi rebel force, defeated the government and militia forces
+  and captured Kigali in July 1994. In the aftermath, over two million Hutus
+  fled to neighbouring Zaire (now DRC), fearing reprisals.
+
+  The International Criminal Tribunal for Rwanda (ICTR) prosecuted 93
+  individuals for genocide, crimes against humanity, and war crimes. The
+  Rwandan government's gacaca court system tried over 1.9 million cases at the
+  community level.
+
+  The genocide has become a defining moment in debates about humanitarian
+  intervention, the Responsibility to Protect doctrine, and the failures of
+  multilateral institutions.
+
+categories:
+  - genocide
+  - human-rights
+
+countries:
+  - RW
+
+region: "Sub-Saharan Africa"
+
+tags:
+  - ethnic violence
+  - UN failure
+  - humanitarian intervention
+  - international criminal law
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "International Criminal Tribunal for Rwanda"
+    url: "https://unictr.irmct.org"
+  - label: "Human Rights Watch — Leave None to Tell the Story"
+    url: "https://www.hrw.org/reports/1999/rwanda"

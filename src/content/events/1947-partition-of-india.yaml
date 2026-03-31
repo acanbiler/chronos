@@ -1,0 +1,55 @@
+title: "Partition of India"
+date: "1947-08-14"
+date_end: "1947-08-15"
+date_display: "August 1947"
+approximate: false
+
+summary: >
+  The end of British rule over the Indian subcontinent in August 1947 brought
+  the simultaneous creation of two independent nations — India and Pakistan —
+  and triggered one of the largest and bloodiest mass migrations in human
+  history, with between 200,000 and 2 million people killed and 10–20 million
+  displaced.
+
+body: |
+  The Partition was the direct result of the British Indian Empire's
+  dissolution. The boundary between India and Pakistan — the Radcliffe Line —
+  was drawn by Sir Cyril Radcliffe in just five weeks, with little local
+  consultation, dividing Punjab and Bengal between the two new states.
+
+  As Hindus, Muslims, and Sikhs found themselves on the "wrong" side of new
+  borders, communal violence erupted on an enormous scale. Convoys of refugees
+  hundreds of miles long moved in both directions. Women and girls were
+  abducted and assaulted in massive numbers; entire villages were massacred.
+
+  The displacement of up to 14–17 million people remains the largest mass
+  migration in recorded history. The trauma of Partition continues to shape
+  the political relationship between India and Pakistan, including three
+  subsequent wars and the unresolved Kashmir conflict, which has been a
+  flashpoint ever since.
+
+categories:
+  - political
+  - human-rights
+
+countries:
+  - IN
+  - PK
+
+region: "South Asia"
+
+tags:
+  - British Empire
+  - decolonisation
+  - communal violence
+  - mass migration
+  - religious conflict
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "1947 Partition Archive"
+    url: "https://www.1947partitionarchive.org"
+  - label: "Partition — BBC History"
+    url: "https://www.bbc.co.uk/history/british/modern/partition1947_01.shtml"

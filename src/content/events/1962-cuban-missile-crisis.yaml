@@ -1,0 +1,57 @@
+title: "Cuban Missile Crisis"
+date: "1962-10-16"
+date_end: "1962-10-28"
+date_display: "October 16–28, 1962"
+approximate: false
+
+summary: >
+  For thirteen days in October 1962, the United States and Soviet Union came
+  closer to nuclear war than at any other point in history, after US
+  reconnaissance aircraft discovered Soviet ballistic missiles being installed
+  in Cuba. The crisis was resolved through direct negotiations and mutual
+  concessions.
+
+body: |
+  The crisis began when U-2 spy plane photographs revealed Soviet medium- and
+  intermediate-range ballistic missile sites under construction in Cuba.
+  President Kennedy convened an emergency advisory group (ExComm) to consider
+  options ranging from a naval blockade to air strikes or an invasion.
+
+  On October 22, Kennedy announced a naval "quarantine" of Cuba and demanded
+  the Soviets remove the missiles. Soviet ships carrying additional military
+  equipment approached the naval cordon before ultimately turning back.
+
+  The resolution came through back-channel diplomacy: the USSR agreed to
+  dismantle and remove the missiles in exchange for a US pledge not to invade
+  Cuba, and a secret agreement to remove US Jupiter missiles from Turkey.
+
+  The crisis accelerated arms-control diplomacy. The "hotline" between the
+  White House and the Kremlin was established in 1963, and the Partial Nuclear
+  Test Ban Treaty was signed the same year. The crisis remains a foundational
+  case study in nuclear deterrence, crisis management, and diplomatic
+  de-escalation.
+
+categories:
+  - political
+
+countries:
+  - CU
+  - US
+
+region: "Caribbean"
+
+tags:
+  - Cold War
+  - nuclear deterrence
+  - Kennedy
+  - Khrushchev
+  - arms control
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "JFK Library — Cuban Missile Crisis"
+    url: "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis"
+  - label: "National Security Archive — Cuban Missile Crisis"
+    url: "https://nsarchive.gwu.edu/project/cuban-missile-crisis"

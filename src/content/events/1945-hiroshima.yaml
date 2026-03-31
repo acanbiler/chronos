@@ -1,0 +1,56 @@
+title: "Atomic Bombing of Hiroshima"
+date: "1945-08-06"
+date_end: "1945-08-09"
+date_display: "August 6–9, 1945"
+approximate: false
+
+summary: >
+  On August 6, 1945, the United States dropped the first atomic bomb ever
+  used in warfare on the Japanese city of Hiroshima, killing an estimated
+  70,000–80,000 people instantly and tens of thousands more from radiation
+  exposure in the months that followed. A second bomb fell on Nagasaki three
+  days later.
+
+body: |
+  The bomb, nicknamed "Little Boy," was a uranium gun-type device dropped
+  from the B-29 Superfortress *Enola Gay*. The blast and subsequent firestorm
+  destroyed approximately 69% of Hiroshima's buildings. By the end of 1945,
+  total deaths attributable to the bombing were estimated at 90,000–166,000.
+
+  Three days later, on August 9, the plutonium implosion bomb "Fat Man" was
+  detonated over Nagasaki, killing an estimated 40,000–80,000 people. Japan
+  announced its surrender on August 15, 1945, formally ending World War II.
+
+  The bombings remain the only wartime use of nuclear weapons in history and
+  sparked a global debate about nuclear deterrence, arms control, and the
+  ethics of targeting civilian populations. The hibakusha (atomic bomb
+  survivors) have been central voices in the international disarmament
+  movement for eight decades.
+
+  The 1968 Nuclear Non-Proliferation Treaty and subsequent arms-control
+  agreements trace their moral urgency in part to the human devastation
+  witnessed at Hiroshima and Nagasaki.
+
+categories:
+  - war-conflict
+
+countries:
+  - JP
+
+region: "East Asia"
+
+tags:
+  - nuclear weapons
+  - World War II
+  - United States
+  - civilian casualties
+  - disarmament
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "Hiroshima Peace Memorial Museum"
+    url: "https://hpmmuseum.jp"
+  - label: "Atomic Heritage Foundation"
+    url: "https://www.atomicheritage.org"

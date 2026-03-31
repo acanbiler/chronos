@@ -1,0 +1,57 @@
+title: "The Holocaust"
+date: "1941-12"
+date_end: "1945-05-08"
+date_display: "1941–1945"
+approximate: false
+
+summary: >
+  The Holocaust was the state-sponsored, systematic persecution and murder of
+  six million Jews by the Nazi regime and its collaborators. Between 1933 and
+  1945, the Nazis, who came to power in Germany in January 1933, believed
+  that Germans were "racially superior" and that the Jews were "inferior."
+
+body: |
+  The Holocaust began with discriminatory laws in Germany in the 1930s and
+  escalated with the mass deportation of European Jews to six extermination
+  camps — Auschwitz-Birkenau, Belzec, Chelmno, Majdanek, Sobibor, and
+  Treblinka — all located in occupied Poland.
+
+  Approximately 1.1 million people were murdered at Auschwitz-Birkenau alone.
+  Beyond the Jewish victims, the Nazis also systematically murdered Roma,
+  people with disabilities, Soviet POWs, Polish civilians, homosexuals,
+  Jehovah's Witnesses, and political opponents.
+
+  The Nuremberg trials (1945–1946) prosecuted surviving Nazi leaders for war
+  crimes and crimes against humanity, establishing the legal precedent that
+  individuals could be held accountable under international law. The trials
+  also contributed to the drafting of the 1948 UN Convention on Genocide.
+
+  The term "genocide" was coined by Polish-Jewish lawyer Raphael Lemkin
+  specifically in response to the Holocaust, and was formally adopted into
+  international law in 1948.
+
+categories:
+  - genocide
+  - war-conflict
+
+countries:
+  - DE
+  - PL
+
+region: "Europe"
+
+tags:
+  - Nazi Germany
+  - antisemitism
+  - extermination camps
+  - World War II
+  - crimes against humanity
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "United States Holocaust Memorial Museum"
+    url: "https://www.ushmm.org/information/about-the-museum"
+  - label: "Yad Vashem World Holocaust Remembrance Center"
+    url: "https://www.yadvashem.org"
