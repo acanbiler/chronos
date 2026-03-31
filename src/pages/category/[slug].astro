@@ -36,9 +36,8 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
       <a
         href="/"
         class="text-sm text-blue-600 dark:text-blue-400 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 rounded"
-      >
-        ← Back to Timeline
-      </a>
+        x-text="$store.i18n.t.back_to_timeline"
+      >← Back to Timeline</a>
     </nav>
     <header class="mb-8">
       <div
@@ -46,8 +45,13 @@ const siteUrl = import.meta.env.SITE ?? 'https://your-domain.pages.dev';
         style={`background-color: ${category.color};`}
         aria-hidden="true"
       ></div>
-      <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">{category.label}</h1>
-      <p class="text-gray-500 dark:text-gray-400 mt-1">{filtered.length} events</p>
+      <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100">
+        <span x-show="$store.i18n.lang !== 'tr'">{category.label}</span>
+        <span x-show="$store.i18n.lang === 'tr'" x-cloak>{category.label_tr}</span>
+      </h1>
+      <p class="text-stone-500 dark:text-stone-400 mt-1"
+        x-text={`$store.i18n.t.events_count.replace('{n}', ${filtered.length})`}
+      >{filtered.length} events</p>
     </header>
     <div class="space-y-4">
       {filtered.map((event) => (
