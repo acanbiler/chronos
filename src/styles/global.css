@@ -8,3 +8,5 @@
 @theme {
   --font-family-sans: 'Inter', system-ui, sans-serif;
 }
+
+[x-cloak] { display: none !important; }
