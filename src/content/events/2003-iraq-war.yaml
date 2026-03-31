@@ -1,0 +1,59 @@
+title: "Iraq War"
+date: "2003-03-20"
+date_end: "2011-12-18"
+date_display: "2003–2011"
+approximate: false
+
+summary: >
+  A US-led coalition invaded Iraq in March 2003, toppling Saddam Hussein's
+  government within weeks on the stated premise that Iraq possessed weapons
+  of mass destruction. No such weapons were found. The occupation triggered an
+  insurgency and sectarian conflict that killed hundreds of thousands of
+  Iraqis and destabilised the region for decades.
+
+body: |
+  The invasion was justified by the George W. Bush administration on grounds
+  that Iraq held stockpiles of biological and chemical weapons and was seeking
+  to acquire nuclear weapons. UN weapons inspectors, led by Hans Blix, were
+  still conducting inspections and had found no evidence of WMD programmes
+  when the US launched the invasion on March 20, 2003, without a second UN
+  Security Council resolution.
+
+  Saddam Hussein's government fell on April 9, 2003, when US forces entered
+  Baghdad. The Coalition Provisional Authority dissolved the Iraqi Army and
+  de-Baathified the government, moves later criticised for fuelling the
+  insurgency by creating a large pool of unemployed, armed men with military
+  training.
+
+  By 2006, sectarian violence between Sunni and Shia factions had plunged Iraq
+  into near-civil war. The "surge" of 30,000 additional US troops in 2007
+  reduced violence but did not resolve underlying political divisions.
+
+  The final US combat troops withdrew in December 2011. Estimates of Iraqi
+  civilian deaths range from 150,000 to over 460,000, with an estimated 4,500
+  US military deaths. The power vacuum contributed to the rise of the Islamic
+  State (ISIS) in 2013–2014.
+
+categories:
+  - war-conflict
+
+countries:
+  - IQ
+
+region: "Middle East"
+
+tags:
+  - WMD
+  - George W Bush
+  - coalition
+  - occupation
+  - ISIS origins
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "Iraq Body Count Project"
+    url: "https://www.iraqbodycount.org"
+  - label: "Chilcot Inquiry Report (UK)"
+    url: "https://webarchive.nationalarchives.gov.uk/ukgwa/20171123122743/http://www.iraqinquiry.org.uk/the-report/"

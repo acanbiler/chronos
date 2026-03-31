@@ -1,0 +1,58 @@
+title: "Russia's Full-Scale Invasion of Ukraine"
+date: "2022-02-24"
+approximate: false
+
+summary: >
+  On February 24, 2022, Russia launched a full-scale invasion of Ukraine —
+  the largest military offensive in Europe since World War II. The invasion
+  followed Russia's seizure of Crimea in 2014 and support for separatists in
+  eastern Ukraine. The conflict has caused tens of thousands of deaths and the
+  displacement of over 14 million people.
+
+body: |
+  Russia had been massing troops on Ukraine's borders since late 2021. President
+  Vladimir Putin, in a pre-invasion address, claimed Ukraine had no legitimate
+  statehood and accused NATO of threatening Russian security. The invasion began
+  in the early hours of February 24, 2022, with missile strikes on cities across
+  Ukraine and ground forces advancing from Russian territory, Crimea, and Belarus.
+
+  The anticipated rapid collapse of Ukrainian resistance did not materialise.
+  Russia's initial assault on Kyiv was repelled, and Ukrainian forces — supplied
+  with weapons from NATO members — launched successful counter-offensives that
+  recaptured significant territory in Kharkiv Oblast in September 2022 and
+  Kherson city in November 2022.
+
+  Western nations imposed the most extensive sanctions ever applied to a major
+  economy, targeting Russia's central bank reserves, energy exports, and key
+  individuals. The European Union and United States provided over $100 billion
+  in military and economic aid to Ukraine by end of 2023.
+
+  The conflict has caused tens of thousands of military deaths on both sides and
+  the displacement of over 14 million Ukrainians — the largest refugee crisis in
+  Europe since World War II. The war's outcome remains unresolved; fighting
+  continues along a contested front line in eastern and southern Ukraine.
+
+categories:
+  - war-conflict
+
+countries:
+  - UA
+  - RU
+
+region: "Europe"
+
+tags:
+  - NATO
+  - Putin
+  - sanctions
+  - refugee crisis
+  - European security
+
+severity: critical
+ongoing: true
+
+sources:
+  - label: "UN Human Rights Monitoring Mission in Ukraine"
+    url: "https://ukraine.un.org/en/sdgs/16"
+  - label: "Ukraine Support Tracker — Kiel Institute"
+    url: "https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/"

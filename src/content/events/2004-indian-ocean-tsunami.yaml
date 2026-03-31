@@ -1,0 +1,55 @@
+title: "2004 Indian Ocean Tsunami"
+date: "2004-12-26"
+approximate: false
+
+summary: >
+  A magnitude-9.1 undersea earthquake off the coast of Sumatra on December 26,
+  2004 generated a series of massive tsunamis that struck 14 countries around
+  the Indian Ocean, killing an estimated 227,898 people in one of the deadliest
+  natural disasters in recorded history.
+
+body: |
+  The earthquake — the third-largest ever recorded — ruptured a 1,200-kilometre
+  fault line under the Indian Ocean. The resulting tsunamis, some reaching
+  heights of 30 metres, struck coastlines in Indonesia, Sri Lanka, India,
+  Thailand, Somalia, Maldives, and beyond within hours.
+
+  Indonesia bore the greatest death toll, with an estimated 168,000 killed,
+  mostly in Aceh province. Sri Lanka lost approximately 35,000, India around
+  12,400, and Thailand over 5,000, including a significant number of foreign
+  tourists. Somalia recorded approximately 300 deaths 6,000 km from the
+  epicentre.
+
+  The disaster prompted the largest international humanitarian response in
+  history at that time, with over US$14 billion in aid pledged. It also
+  accelerated the creation of the Indian Ocean Tsunami Warning System,
+  operational by 2006.
+
+  The disaster spurred global debate about disaster preparedness, coastal
+  development in tsunami-prone zones, and international coordination of
+  early-warning systems.
+
+categories:
+  - environment
+
+countries:
+  - ID
+  - TH
+  - LK
+
+region: "Southeast Asia / South Asia"
+
+tags:
+  - natural disaster
+  - earthquake
+  - humanitarian response
+  - early warning systems
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "USGS — 2004 Sumatra-Andaman earthquake"
+    url: "https://earthquake.usgs.gov/earthquakes/eventpage/usp000d6bf/executive"
+  - label: "UNESCO Indian Ocean Tsunami Warning System"
+    url: "https://www.ioc-tsunami.org"

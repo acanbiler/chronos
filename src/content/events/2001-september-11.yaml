@@ -1,0 +1,55 @@
+title: "September 11 Attacks"
+date: "2001-09-11"
+approximate: false
+
+summary: >
+  On the morning of September 11, 2001, nineteen al-Qaeda hijackers seized
+  four commercial aircraft in a coordinated attack on the United States. Two
+  planes struck the World Trade Center towers in New York City, one hit the
+  Pentagon, and a fourth crashed in Pennsylvania after passengers attempted to
+  overpower the hijackers. Nearly 3,000 people were killed.
+
+body: |
+  The attacks were planned and ordered by al-Qaeda leader Osama bin Laden and
+  executed by a 19-member cell of operatives. American Airlines Flight 11 and
+  United Airlines Flight 175 struck the North and South towers of the World
+  Trade Center; both towers collapsed within two hours. American Airlines
+  Flight 77 struck the Pentagon in Arlington, Virginia. United Airlines Flight 93
+  crashed near Shanksville, Pennsylvania after passengers — alerted by phone
+  calls about the other hijackings — attempted to retake control.
+
+  In total, 2,977 victims were killed, making it the deadliest terrorist attack
+  in history. The immediate response included a US invasion of Afghanistan to
+  topple the Taliban government that harboured al-Qaeda, the passage of the USA
+  PATRIOT Act, and the creation of the Department of Homeland Security.
+
+  The attacks fundamentally reshaped US foreign and domestic policy. The "Global
+  War on Terror" led to over two decades of military operations in Afghanistan
+  and contributed to the 2003 invasion of Iraq. Civil liberties debates around
+  mass surveillance, indefinite detention, and extraordinary rendition continue
+  to echo in policy discussions today.
+
+categories:
+  - war-conflict
+  - political
+
+countries:
+  - US
+
+region: "North America"
+
+tags:
+  - terrorism
+  - al-Qaeda
+  - Osama bin Laden
+  - War on Terror
+  - aviation security
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "9/11 Commission Report"
+    url: "https://9-11commission.gov/report/"
+  - label: "National September 11 Memorial and Museum"
+    url: "https://www.911memorial.org"

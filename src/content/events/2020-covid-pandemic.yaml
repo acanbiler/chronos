@@ -1,0 +1,57 @@
+title: "COVID-19 Pandemic"
+date: "2020-01-30"
+date_end: "2023-05-05"
+date_display: "2020–2023"
+approximate: false
+
+summary: >
+  The COVID-19 pandemic, caused by the SARS-CoV-2 coronavirus, was declared
+  a Public Health Emergency of International Concern by the WHO on January 30,
+  2020, and a pandemic on March 11, 2020. By the time the WHO ended the global
+  health emergency in May 2023, the virus had killed an estimated 7 million
+  people officially, with excess-mortality estimates ranging from 15 to 20 million.
+
+body: |
+  SARS-CoV-2 was first identified in Wuhan, China in late 2019. Within months
+  it had spread globally, overwhelming healthcare systems in Italy, Spain, the
+  United States, Brazil, and India. By April 2020, over one-third of the world's
+  population was under some form of lockdown.
+
+  The pandemic prompted the fastest vaccine development in history. The first
+  mRNA vaccines — from Pfizer-BioNTech and Moderna — received emergency
+  authorisation in December 2020, less than a year after the virus was sequenced.
+  By mid-2023, over 13 billion vaccine doses had been administered globally.
+
+  Economic disruption was severe. Global GDP contracted by 3.1% in 2020 — the
+  deepest peacetime recession since the Great Depression. Governments spent an
+  estimated $16 trillion in emergency fiscal support. Supply chain disruptions,
+  combined with post-pandemic stimulus, contributed to the highest inflation
+  rates in 40 years in 2021–2022.
+
+  Long COVID — persistent symptoms in a subset of survivors — emerged as a
+  significant public-health challenge. The pandemic also exposed deep inequalities
+  in vaccine access between high- and low-income countries, renewing debates
+  about intellectual property rights and global health governance.
+
+categories:
+  - pandemic
+
+countries: []
+
+region: "Global"
+
+tags:
+  - SARS-CoV-2
+  - lockdown
+  - mRNA vaccine
+  - WHO
+  - excess mortality
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "WHO COVID-19 Dashboard"
+    url: "https://covid19.who.int"
+  - label: "Our World in Data — COVID-19"
+    url: "https://ourworldindata.org/coronavirus"

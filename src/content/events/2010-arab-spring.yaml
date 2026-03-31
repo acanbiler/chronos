@@ -1,0 +1,62 @@
+title: "Arab Spring"
+date: "2010-12"
+date_end: "2012-12"
+date_display: "2010–2012"
+approximate: true
+
+summary: >
+  Beginning with Mohamed Bouazizi's self-immolation in Tunisia in December 2010,
+  a wave of pro-democracy protests and uprisings swept the Arab world. The
+  revolutions toppled long-standing leaders in Tunisia, Egypt, Libya, and Yemen,
+  while triggering a devastating civil war in Syria that continues to this day.
+
+body: |
+  The Arab Spring began in Sidi Bouzid, Tunisia, when street vendor Mohamed
+  Bouazizi set himself on fire on December 17, 2010, protesting police harassment
+  and corruption. The act ignited mass demonstrations that drove President Zine
+  El Abidine Ben Ali — in power for 23 years — from office in January 2011.
+
+  In Egypt, 18 days of protest in Tahrir Square ended with President Hosni
+  Mubarak's resignation on February 11, 2011, after 30 years in power. In Libya,
+  an uprising against Muammar Gaddafi escalated into civil war; a NATO air
+  campaign supported the rebels, and Gaddafi was captured and killed in
+  October 2011. Yemen's President Ali Abdullah Saleh agreed to step down in 2011
+  amid protests and an armed uprising.
+
+  In Syria, peaceful protests were met with violent government crackdowns that
+  spiralled into a full-scale civil war beginning in 2011, drawing in regional
+  powers, jihadist groups, and eventually Russian military intervention. The
+  conflict has killed an estimated 500,000 people and displaced over 12 million.
+
+  The initial optimism about democratic transition in the Arab world largely gave
+  way to disillusionment: Egypt returned to military rule in 2013, Libya descended
+  into prolonged factional conflict, and Yemen became the site of a catastrophic
+  humanitarian crisis. Tunisia's democratic experiment was the notable exception,
+  though it has also faced serious backsliding since 2021.
+
+categories:
+  - political
+  - human-rights
+
+countries:
+  - EG
+  - TN
+  - SY
+
+region: "Middle East / North Africa"
+
+tags:
+  - democracy
+  - revolution
+  - social media
+  - civil war
+  - protest
+
+severity: severe
+ongoing: true
+
+sources:
+  - label: "Arab Spring — Brookings Institution"
+    url: "https://www.brookings.edu/research/the-arab-spring-five-years-later/"
+  - label: "Syria conflict — UN OCHA"
+    url: "https://www.unocha.org/syria"

@@ -1,0 +1,60 @@
+title: "Korean War"
+date: "1950-06-25"
+date_end: "1953-07-27"
+date_display: "1950–1953"
+approximate: false
+
+summary: >
+  The Korean War began when North Korean forces, backed by the Soviet Union
+  and China, invaded South Korea on June 25, 1950. A UN-mandated coalition led
+  by the United States repelled the invasion, but three years of fighting left
+  the peninsula divided at roughly the 38th parallel, with an armistice — not
+  a peace treaty — still in force today.
+
+body: |
+  Following Japan's defeat in World War II, Korea was divided along the 38th
+  parallel into Soviet- and American-occupied zones, which became the communist
+  Democratic People's Republic of Korea in the north and the Republic of Korea
+  in the south. Tensions escalated into full-scale war on June 25, 1950, when
+  the Korean People's Army crossed the border with Soviet armour.
+
+  UN Security Council Resolution 83 authorised military intervention (the USSR
+  was boycotting the Council at the time). General Douglas MacArthur commanded
+  UN forces and led a daring amphibious landing at Inchon in September 1950,
+  rapidly pushing north toward the Chinese border. China entered the war in
+  October 1950 with roughly 300,000 troops, forcing a UN retreat.
+
+  The war settled into a bloody stalemate near the original 38th parallel for
+  most of 1951–1953. An armistice was signed on July 27, 1953, creating the
+  Demilitarized Zone (DMZ). Approximately 36,000 Americans, 137,000 South
+  Koreans, and an estimated 1.5 million Chinese and North Korean soldiers died,
+  along with roughly two million Korean civilians.
+
+  No formal peace treaty has ever been signed. North Korea remains one of the
+  world's most isolated states, and the armistice of 1953 remains technically
+  the only legal instrument ending the fighting.
+
+categories:
+  - war-conflict
+
+countries:
+  - KR
+  - KP
+
+region: "East Asia"
+
+tags:
+  - Cold War
+  - United Nations
+  - China
+  - armistice
+  - division
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "Korean War — Britannica"
+    url: "https://www.britannica.com/event/Korean-War"
+  - label: "UN Korean War documentation"
+    url: "https://www.un.org/en/about-us/history/korean-war"

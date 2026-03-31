@@ -1,0 +1,58 @@
+title: "Srebrenica Massacre"
+date: "1995-07-11"
+date_end: "1995-07-22"
+date_display: "July 1995"
+approximate: false
+
+summary: >
+  In July 1995, Bosnian Serb forces under General Ratko Mladic systematically
+  executed more than 8,000 Bosniak Muslim men and boys in and around Srebrenica,
+  a UN-designated "safe area" in eastern Bosnia. It was the worst atrocity on
+  European soil since the Holocaust.
+
+body: |
+  The Srebrenica massacre occurred at the end of the Bosnian War (1992–1995),
+  in which Bosnian Serb forces pursued a campaign of ethnic cleansing against
+  Bosniak (Bosnian Muslim) and Croat populations.
+
+  When General Ratko Mladic's Army of Republika Srpska seized the town on
+  July 11, 1995, some 25,000–30,000 Bosniaks — mostly women, children, and
+  the elderly — sought refuge with the Dutch UN battalion (Dutchbat) stationed
+  nearby. Men and boys between approximately 12 and 77 were systematically
+  separated and killed; their bodies were buried in mass graves that were later
+  bulldozed and relocated to conceal evidence.
+
+  The Dutch UN peacekeepers, lacking the mandate and firepower to resist,
+  handed over Bosniaks sheltering at their compound. NATO air strikes were
+  repeatedly delayed by the UN chain of command.
+
+  The International Criminal Tribunal for the Former Yugoslavia (ICTY) ruled
+  the killings a genocide in 1999 and convicted Mladic (2017) and former
+  Bosnian Serb President Radovan Karadzic (2016, upheld 2019) of genocide. The
+  International Court of Justice also ruled in 2007 that genocide had been
+  committed.
+
+categories:
+  - genocide
+  - war-conflict
+
+countries:
+  - BA
+
+region: "Europe"
+
+tags:
+  - Bosnia
+  - ethnic cleansing
+  - UN peacekeeping
+  - ICTY
+  - NATO failure
+
+severity: critical
+ongoing: false
+
+sources:
+  - label: "ICTY — Srebrenica case information"
+    url: "https://www.icty.org/sid/324"
+  - label: "Srebrenica Memorial Centre"
+    url: "https://www.srebrenicamemorial.org"

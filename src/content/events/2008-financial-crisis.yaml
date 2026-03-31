@@ -1,0 +1,60 @@
+title: "2008 Global Financial Crisis"
+date: "2008-09"
+date_end: "2009-06"
+date_display: "2008–2009"
+approximate: true
+
+summary: >
+  The collapse of the US subprime mortgage market in 2007–2008 triggered a
+  global financial crisis — the worst since the Great Depression. The failure
+  of Lehman Brothers in September 2008 precipitated a worldwide credit freeze,
+  stock market collapses, and recessions across advanced economies that cost
+  tens of millions of jobs.
+
+body: |
+  Years of lax lending standards, complex mortgage-backed securities, and
+  inadequate financial regulation created an enormous housing bubble in the
+  United States. When housing prices peaked and began falling in 2006–2007,
+  subprime mortgage defaults surged, causing catastrophic losses at financial
+  institutions that held these instruments.
+
+  The crisis reached its acute phase in September 2008. Fannie Mae and Freddie
+  Mac were placed in government conservatorship. Lehman Brothers filed for
+  bankruptcy on September 15, 2008 — the largest bankruptcy in US history.
+  Merrill Lynch was sold to Bank of America. AIG required an $85 billion
+  government bailout to prevent its collapse.
+
+  The US government responded with the $700 billion Troubled Asset Relief
+  Programme (TARP). The Federal Reserve cut interest rates to near zero and
+  launched unprecedented quantitative-easing programmes. Similar measures were
+  adopted by central banks worldwide.
+
+  The crisis triggered the longest and deepest global recession since the 1930s.
+  Unemployment in the US peaked at 10% in October 2009; the Eurozone entered a
+  prolonged sovereign-debt crisis that lasted until 2012–2013. Global GDP fell
+  by approximately 2% in 2009. The Basel III banking regulations, implemented
+  from 2010, were the most significant regulatory overhaul of the global banking
+  system since the 1930s.
+
+categories:
+  - economics
+
+countries: []
+
+region: "Global"
+
+tags:
+  - Lehman Brothers
+  - subprime mortgage
+  - TARP
+  - quantitative easing
+  - Eurozone crisis
+
+severity: severe
+ongoing: false
+
+sources:
+  - label: "Financial Crisis Inquiry Commission Report"
+    url: "https://fcic.law.stanford.edu/report"
+  - label: "IMF — Global Financial Stability Report 2008"
+    url: "https://www.imf.org/en/Publications/GFSR"
