@@ -11,20 +11,26 @@ const supportedLangs = [
 ];
 
 interface Props {
-  title: string;
+  title?: string;
   description: string;
   canonicalUrl: string;
   image?: { src: string; alt: string };
 }
 
 const { title, description, canonicalUrl, image } = Astro.props;
+
+// Page-specific prefix for browser tab title (empty on home page)
+const pagePrefix = title || '';
+const docTitle = pagePrefix
+  ? `${pagePrefix} — ${en.nav_title}`
+  : en.nav_title;
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title} — World Events Timeline</title>
+    <title>{docTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
@@ -55,28 +61,39 @@ const { title, description, canonicalUrl, image } = Astro.props;
     </script>
 
     <!-- i18n translations embedded at build time -->
-    <script is:inline define:vars={{ allTranslations }}>
+    <script is:inline define:vars={{ allTranslations, pagePrefix }}>
       window.__I18N__ = allTranslations;
+      window.__chronosPagePrefix = pagePrefix;
     </script>
 
     <!-- Alpine i18n store — must be is:inline, no defer, before Alpine CDN -->
     <script is:inline>
       document.addEventListener('alpine:init', () => {
+        const initLang = localStorage.getItem('lang') || 'en';
         Alpine.store('i18n', {
-          lang: localStorage.getItem('lang') || 'en',
-          get t() { return window.__I18N__[this.lang] || window.__I18N__.en; },
+          lang: initLang,
+          t: window.__I18N__[initLang] || window.__I18N__.en,
           setLang(code) {
             this.lang = code;
+            this.t = window.__I18N__[code] || window.__I18N__.en;
             localStorage.setItem('lang', code);
             document.documentElement.lang = code;
+            const prefix = window.__chronosPagePrefix;
+            document.title = prefix ? `${prefix} \u2014 ${this.t.nav_title}` : this.t.nav_title;
           },
         });
+        // Sync browser tab title on load when non-English is stored
+        if (initLang !== 'en') {
+          const t = window.__I18N__[initLang] || window.__I18N__.en;
+          const prefix = window.__chronosPagePrefix;
+          document.title = prefix ? `${prefix} \u2014 ${t.nav_title}` : t.nav_title;
+        }
       });
     </script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="bg-stone-50 dark:bg-stone-950 text-stone-700 dark:text-stone-300 font-sans min-h-screen">
+  <body x-data class="bg-stone-50 dark:bg-stone-950 text-stone-700 dark:text-stone-300 font-sans min-h-screen">
 
     <!-- Skip to content link -->
     <a
